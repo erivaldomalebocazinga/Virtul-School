@@ -46,8 +46,8 @@ menuItems.forEach(item => {
 
 /* search messages */
 const searchMessage = () => {
-    const val = messageSearch.value.toLocaleLowerCase()
-    /* console.log(val) */
+    const val = messageSearch.value.toLowerCase()
+    console.log(val)
     message.forEach(chat => {
         let name = chat.querySelectorAll('h5').textContent.toLocaleLowerCase()
         if(name.indexOf(val) != -1) {
@@ -88,7 +88,52 @@ themeModal.addEventListener('click', closeThemeModal)
 
 theme.addEventListener('click', openThemeModal)
 
-s
+
+/* --------- Fonts ----------------- */
+
+//Remove a class 'active', se o span não for selecionado
+const removeSizeSelector = ()=> {
+    fontSize.forEach(size => {
+        size.classList.remove('active')
+    }) 
+}
+
+fontSize.forEach(size => {
+
+    size.addEventListener('click', ()=> {
+        removeSizeSelector()
+        let fontSize;
+        size.classList.toggle('active')
+
+
+        if(size.classList.contains('font-size-1')){
+            fontSize = '10px'
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-rigth','5.4rem')
+        } else if(size.classList.contains('font-size-2')){
+            fontSize = '13px'
+            root.style.setProperty('--sticky-top-left','5.4rem')
+            root.style.setProperty('--sticky-top-rigth','-7rem')
+        } else if(size.classList.contains('font-size-3')){
+            fontSize = '16px'
+            root.style.setProperty('--sticky-top-left','-2rem')
+            root.style.setProperty('--sticky-top-rigth','-17rem')
+        } else if(size.classList.contains('font-size-4')){
+            fontSize = '19px'
+            root.style.setProperty('--sticky-top-left','-5rem')
+            root.style.setProperty('--sticky-top-rigth','-25rem')
+        } else if(size.classList.contains('font-size-5')){
+            fontSize = '22px'
+            root.style.setProperty('--sticky-top-left','-12rem')
+            root.style.setProperty('--sticky-top-rigth','-35rem')
+        }
+    
+        //muda de todo o html
+        document.querySelector('html').style.fontSize = fontSize
+    })
+
+})
+
 
 
 //remove a classe 'active'
@@ -165,15 +210,12 @@ Bg2.addEventListener('click', ()=> {
 
     
     changeBG()
-    console.log(darkColorLightness.value)
-    console.log(lightColorLightness.value)
-    console.log(whiteColorLightness.value)
 
 })
 
 Bg3.addEventListener('click', ()=> {
     darkColorLightness = '95%'
-    whiteColorLightness = '10%'
+    whiteColorLightness = '4%'
     lightColorLightness = '0%'
 
     //add active class
@@ -183,7 +225,6 @@ Bg3.addEventListener('click', ()=> {
     Bg2.classList.remove('active')
 
     changeBG()
-    console.log(Bg3)
 })
 
 //end

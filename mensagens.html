@@ -10,362 +10,79 @@
     <link rel="stylesheet" href="image/fontawesome/css/all.css">
 </head>
 <body>
-    <header id="header">
-        <div class="logomark">
-            <img src="image/favicon.ico" alt="">
-            <h2>IPDDFSocial</h2>
+    <nav>
+        <div class="container">
+            <h2 class="logo">
+                <img src="image/IPDDFSocial.png" alt="">
+                IPDDFSocials
+            </h2>
+            
+            <div class="create">
+                <i class="fa-solid fa-bars"></i>
+                <div class="profile-photo">
+                    <img src="./image/profile-8.jpg" alt="">
+                </div>
+            </div>
         </div>
-    </header>
-
-    <div class="menu-bar">
-        <nav>
-            <div class="menu">
-                <a href="home.html" class="menu-item">
-                    <i class="fa-solid fa-house"></i>
-                    <div class="abbr">
-                        <div>
-                            <small>Ínicio</small>
-                            <span class="prompt-s"></span>
-                        </div>
+    </nav>
+    <!-- ------------------ MAIN ------------------- -->
+    <main>
+        <section id="container-sidebar">
+            <div class="sidebar">
+                <a href="home.html" class="menu-item active">
+                    <span><i class="fa-solid fa-house"></i></span>
+                    <div class="abbr-menu-item">
+                        <div><span>Ínicio</span></div>
                     </div>
                 </a>
-                <a class="menu-item" id="notifications">
-                    <i class="fa-regular fa-bell">
-                        <small class="notification-count">9+</small>
-                    </i>
-                    <div class="abbr">
-                        <div>    
-                            <small>Notificações</small>
-                            <span class="prompt-s"></span>
-                        </div>
-                    </div>
-                </a>
-                <a href="message.html" class="menu-item active">
-                    <i class="fa-regular fa-message">
-                        <small class="notification-count">4</small>
-                    </i>
-                    <div class="abbr">
-                        <div> 
-                            <small>Mensagens</small>
-                            <span class="prompt-s"></span>
-                        </div>
+                <a class="menu-item" id="messages-notification">
+                    <span>
+                        <i class="fa-regular fa-message">
+                            <small class="notification-count">6</small>
+                        </i>
+                    </span>
+                    <div class="abbr-menu-item">
+                        <div><span>Mensagens</span></div>
                     </div>
                 </a>
                 <a class="menu-item">
-                    <i class="fa-regular fa-window-maximize"></i>
-                    <div class="abbr">
-                        <div>  
-                            <small>Vitrine</small>
-                            <span class="prompt-s"></span>
-                        </div>
+                    <span>
+                        <i class="fa-regular fa-window-maximize"></i>
+                    </span>
+                    <div class="abbr-menu-item">
+                        <div><span>Vitrine</span></div>
                     </div>
                 </a>
                 <a class="menu-item" id="theme">
-                    <i class="fa-solid fa-palette"></i>
-                    <div class="abbr">
-                        <div>
-                            <small>Tema</small>
-                            <span class="prompt-s"></span>
-                        </div>
+                    <span>
+                        <i class="fa-solid fa-palette"></i>
+                    </span>
+                    <div class="abbr-menu-item">
+                        <div><span>Theme</span></div>
                     </div>
                 </a>
-                <a class="menu-item">
-                    <i class="fa-solid fa-gear"></i>
-                    <div class="abbr">
-                        <div>
-                            
-                        <small>Definições</small>
-                        <span class="prompt-s"></span>
-                        </div>
+                <a class="menu-item" >
+                    <span>
+                        <i class="fa-solid fa-gear"></i>
+                    </span>
+                    <div class="abbr-menu-item">
+                        <div><span>Definições</span></div>
                     </div>
                 </a>
             </div>
-        </nav>
-    </div>
-    <!-- ========================= INICIO DO MAIN ========================= -->
-    <main>
-        <div class="main-container">
-            <div class="leght">
-                <div class="top-select-chat">
-                    <div class="cab">
-                        <h2>Mensagens</h2>
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </div>
-                    <div class="search-container">
-                        <label for="select-chat">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </label>
-                        <input type="search" id="select-chat" placeholder="Procure pela conversa">
-                    </div>
-                </div>
-                <div class="options-chat">
-                    <!-- ----------------- 01 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-1.jpg" alt="">
-                        <div>
-                            <h4>TI12C - SEAC</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 02 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-2.jpg" alt="">
-                        <div>
-                            <h4>TI12C - TLP</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 03 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-3.jpg" alt="">
-                        <div>
-                            <h4>TI12C - TREI</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 04 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-4.jpg" alt="">
-                        <div>
-                            <h4>TI12C - OGI</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 05 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-5.jpg" alt="">
-                        <div>
-                            <h4>TI12C - EMPREEND</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 06 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-6.jpg" alt="">
-                        <div>
-                            <h4>TI12C - MATH</h4>
-                            <P class="lastMessage">
-                                <small>Bom dia estudantes!</small>
-                            </P>
-                            <small class="count-hours">20:10</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 07 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-7.jpg" alt="">
-                        <div>
-                            <h4>TI12C - ENGLISH</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>1 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">9:02</small>
-                            <small class="messages-count">1</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 08 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-8.jpg" alt="">
-                        <div>
-                            <h4>TI12C - FÍSICA</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>1 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">01:32</small>
-                            <small class="messages-count">1</small>
-                        </div>
-                    </div>
-                    <!-- ----------------- 09 ------------------ -->
-                    <div class="message-grup">
-                        <img src="image/profile-9.jpg" alt="">
-                        <div>
-                            <h4>TI12C - PT</h4>
-                            <P class="lastMessage">
-                                <i class="fa-solid fa-file"></i>
-                                <small>2 Novos ficheiros</small>
-                            </P>
-                            <small class="count-hours">19:12</small>
-                            <small class="messages-count">2</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="meedth">
-                <div class="view-messages">
-                    <div class="container-messages">
-                        <div class="content-chat visite">
-                            <div class="cont-message">
-                                <img src="image/profile-2.jpg" class="profile" alt="#">
-                                <div class="message-conteudo">
-                                    <p>
-                                        Lorem ipsum dolor?
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="count-envio">2min</small>
-                        </div>
-
-                        <div class="content-chat your">
-                            <div class="cont-message">
-                                <img src="image/profile-1.jpg" class="profile" alt="#">
-                                <div class="message-conteudo">
-                                    <p>
-                                        Lorem ipsum dolor?
-                                    </p>
-                                </div>
-                            </div>
-                            <small class="count-envio">Agora</small>
-                        </div>
-                    </div>
-                    <div class="controles-messages">
-                        <div class="emojis">
-                            <div class="type-emojis">
-                                <i><i class="fa-regular fa-clock"></i></i>
-                                <i><i class="fa-solid fa-face-smile"></i></i>
-                                <i></i>
-                                <i><i class="fa-solid fa-mug-saucer"></i></i>
-                                <i><i class="fa-regular fa-futbol"></i></i>
-                                <i><i class="fa-solid fa-car"></i></i>
-                                <i></i>
-                                <i></i>
-                                <i><i class="fa-regular fa-flag"></i></i>
-                            </div>
-                            <div class="group-emojis">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas provident assumenda quam ipsum fuga culpa ullam dolorum obcaecati. Ullam magnam veniam possimus alias. Rerum sint non, eos obcaecati deserunt nulla.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis fuga eveniet earum neque quibusdam delectus, molestiae eum sequi consectetur nostrum aut optio suscipit tempora dolorem! Nam doloribus nulla soluta!
-                            </div>
-                        </div>
-                        <form action="#">
-                            <input type="file"  id="ficheiros" placeholder="#">
-                            <label for="ficheiros"><i class="fa-solid fa-file"></i></label>
-                            
-                            <i class="fa-solid fa-microphone"></i>
-                            <i class="fa-solid fa-face-smile"></i>
-    
-                            <input type="text" placeholder="Escreva aqui a sua mensagem">
-                            
-                            <input type="submit" id="btnEnviar" value="Enviar">
-                            <label for="btnEnviar">
-                                <i class="fa-brands fa-telegram"></i>
-                            </label>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="rigth">
+        </section>
+        <section id="io">
+            <section>S2.1</section>
+            <section id="S2-2-DIV-1">
                 <div>
-                    <div class="profile-group">
-                        <img src="image/profile-2.jpg" alt="#">
-                        <h2>TI12C - T.L.P</h2>
-                        <span class="members-count">
-                            Possui 20 membros
-                        </span>
-                    </div>
-                    <div class="multimedia">
-                        <div class="fotos">
-                            <div class="media-cont">
-                                <h2>Fotos</h2>
-                                <span class="cetinha">oi</span>
-                                <small class="fotos-count">12 fotos</small>
-                            </div>
-                            <div class="galery">
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-1.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-2.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-3.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-4.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-5.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-6.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-7.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-8.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-9.jpg" alt="#">
-                                </div>
-                                <div class="galery-foto">
-                                    <div class="degrade-effect"></div>
-                                    <img src="image/profile-10.jpg" alt="#">
-                                </div>
-                                
-                            </div>
-                        </div>
-                        <div class="videos">
-                            <div class="media-cont">
-                                <h2>Vídeos</h2>
-                                <span class="cetinha">oi</span>
-                                <small class="fotos-count">2 vídeos</small>
-                            </div>
-                        </div>
-                        <div class="documents">
-                            <div class="media-cont">
-                                <h2>Documentos</h2>
-                                <span class="cetinha">oi</span>
-                                <small class="fotos-count">0 Documentos</small>
-                            </div>
-                        </div>
-                        <div class="membros">
-                            <div class="media-cont">
-                                <h2>Membros</h2>
-                                <span class="cetinha">oi</span>
-                                <small class="fotos-count">20 Membros</small>
-                            </div>
-                        </div>
-                    </div>
-
+                    S2.2 - DIV-1
                 </div>
-            </div>
-        </div>
+                <div>
+                    S2.2 - DIV-2
+                </div>
+            </section>
+        </section>
+        
     </main>
 </body>
 </html>

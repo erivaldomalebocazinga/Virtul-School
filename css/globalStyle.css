@@ -6,7 +6,8 @@
 *::before {
     margin: 0;
     padding: 0;
-    outline: none;
+    outline: 0;
+    border: none;
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
