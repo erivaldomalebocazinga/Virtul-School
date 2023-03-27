@@ -11,7 +11,7 @@
 
     --color-white: hsl(252,30%, var(--white-color-lightness));
     --color-light: hsl(252,30%, var(--light-color-lightness));
-    --color-super-light:hsl(230, 0%, var(--light-color-lightness));
+    --color-super-light: #e0e0e0;
     --color-gray: hsl(var(--color-primary-hue),15%,60%);
 
     --color-primary: hsl(var(--color-primary-hue), 100%, 49%);
@@ -36,7 +36,9 @@
 }
 
 body {
+
     color: var(--color-dark);
+    background: rebeccapurple;
 }
 
 /* ======= GERAL STYLE ======== */
@@ -83,12 +85,8 @@ img {
 
 /* =========  NAV TOP  ========== */
 nav {
-    top: 0;
-    left: 0;
-    z-index: 10;
     width: 100%;
     height: 64px;
-    position: fixed;
     background: var(--color-white);
 }
 
@@ -113,8 +111,30 @@ nav .container .create i {
 nav .container h2 img {
     width: 4rem;
 }
+/* ================================== MAIN ==================================== */
+main {
+    display: grid;
+    height: calc(100vh - 64px);
+    grid-template-columns: 70px calc(100vw - 70px);
+}
 
 /* ===============  SIDEBAR LATERAL ================= */
+
+
+main > section:nth-child(1).open  {
+    display: block;
+}
+
+main > section:nth-child(1).close  {
+    display: none;
+}
+
+main > section:nth-child(1) .sidebar {
+    height: calc(100vh - 64px);
+    background: var(--color-white);
+    border-right: 1px solid var(--color-light);
+
+}
 
 main .sidebar .menu-item {
     width: 100%;
@@ -154,6 +174,21 @@ main .sidebar .menu-item .abbr-menu-item div {
 }
 
 /* -------------- Fim do Elemento Abbr -------------- */
+
+main .sidebar .menu-item i .notification-count {
+    top: 5px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    display: flex;
+    color: white;
+    font-size: .5rem;
+    border-radius: 50%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-danger)
+}
 
 main .sidebar .menu-item i {
     width: 40px;
@@ -195,55 +230,173 @@ main .sidebar a.menu-item.active::before {
     width: 10px;
 }
 
+/* ------------ NOTIFICATION POPUP ------------------- */
+main .sidebar .menu-item .notifications-popup {
+    top: 0;
+    z-index: 8;
+    left: 120%;
+    width: 30rem;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    position: absolute;
+    padding: var(--card-padding);
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
 
-
-
-
-
-
-/* =======================  resp ======================== */
-main {
-    display: grid;
-    background: #808080;
-    height: calc(100vh - 70px);
-    transform: translateY(64px);
-    grid-template-columns: 70px calc(100vw - 70px);
+    display: none;/* Aparee e desaparece com JS */
 }
 
-main > section:nth-child(1) {
-    background: #cc4040;
+main .sidebar .menu-item .notifications-popup::before {
+    content: "";
+    left: -.6rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    transform: rotate(45deg);
+    background: var(--color-white);
 }
 
-main > section:nth-child(2) {
-    background: #d1d1d1;
+main .sidebar .menu-item .notifications-popup > div {
+    display: flex;
+    gap: .1rem;
+    overflow-y: scroll;
+    flex-direction: column;
+    height: calc(calc(44px + 1rem)* 6);
 }
 
+main .sidebar .menu-item .notifications-popup > div > div {
+    gap: 1rem;
+    display: flex;
+    align-items: start;
+    padding: .5rem 0rem .5rem 0;
+}
 
-main > section#io {
+main .sidebar .menu-item .notifications-popup > div > div:hover {
+    background: var(--color-light);
+}
+
+main .sidebar .menu-item .notifications-popup > div > div p {
+    width: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+.left .notifications-popup small {
+    display: block;
+}
+
+/* ================================  CHAT MESSAGES =========================== */
+main > section#Sel-chat {
     display: grid;
     grid-template-columns: 22vw 72.3vw;
 }
 
-main > section#io section:nth-child(1) {
-    background: rgb(255, 174, 108);
+/* ---------------  chat  ----------------- */
+main > section#Sel-chat > section {
+    height: 603px;
+    background: var(--color-white);
 }
 
-main > section#io section:nth-child(2) {
-    background: chocolate;
+section#Sel-chat > section .top-select-chat {
+    padding: var(--card-padding);
+    border-bottom: 1px solid var(--color-light);
+}
+
+/* ----------- Cabeçalho --------- */
+section#Sel-chat > section .top-select-chat div:nth-child(1) {
+    display: flex;
+    padding: 0 0 1rem 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar {
+    display: flex;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--border-radius);
+}
+
+.search-bar input[type="search"] {
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    background: transparent;
+    color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::placeholder {
+    color: var(--color-gray);
+}
+
+/* ----------- conversas --------- */
+.cont-conversas {
+    height: 81%;
+    overflow-y: scroll;
+}
+
+.cont-conversas .message-grup {
+    gap: .7rem;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    padding: 0 .5rem;
+    position: relative;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.cont-conversas .message-grup:hover {
+    background: var(--color-light);
+}
+
+.cont-conversas .message-grup .lastMessage{
+    font-size: .8rem;
+    margin-top: .2rem;
+    color: var(--color-gray);
+}
+
+.cont-conversas .message-grup img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cont-conversas .message-grup .count-hours {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+
+.cont-conversas .message-grup .messages-count {
+    width: 15px;
+    height: 15px;
+    right: 7px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    color: var(--color-white);
+    transform: translateY(-20px);
+    background: var(--color-primary);
 }
 
 
-main section#S2-2-DIV-1 {
+
+/* =======================  viewport-chats ======================== */
+
+main section#viewport-chats {
     display: grid;
-    grid-template-rows: calc(100vh - 100px) 50px;
+    grid-template-rows: calc(100vh - 114px) 50px;
 }
 
-main section#S2-2-DIV-1 div:nth-child(1) {
+main section#viewport-chats div:nth-child(1) {
     background: rgb(89, 84, 97);
 }
 
-main section#S2-2-DIV-1 div:nth-child(2) {
-    background: rgb(97, 70, 3);
+main section#viewport-chats div:nth-child(2) {
+    background: var(--color-white);
 } 
 
 
@@ -252,15 +405,16 @@ MEDAIA QUERIS FOR SMALL LAPTOS AND BIG TABLETS
 ============================
 */
 @media screen and (max-width: 1200px) {
-    main > section#io {
+    main > section#Sel-chat {
         display: grid;
         grid-template-columns: 100%;
     }
 
-    main > section#io section:nth-child(1) {
+    main > section#Sel-chat section:nth-child(1) {
         display: none;
     }
 }
+
 
 /*===============================
 MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
@@ -273,11 +427,6 @@ MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
         grid-template-columns: 100vw;
     }
 
-    nav {
-        z-index: -10;
-        position: absolute;
-    }
-
     nav .container .create .profile-photo {
         display: none;
     }
@@ -285,19 +434,52 @@ MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
     nav .container .create i {
         display: block;
     }
+    
+    nav .container .create i.fa-xmark {
+        font-size: 2rem;
+    }
 
     /* --------------  Sidebar (modal) -------------- */
     main > section:nth-child(1)/* classe: container-sidebar */ {
-        top: 0;
+        top: 64px;
         left: 0;
-        z-index: 10;
+        z-index: 9;
         width: 100vw;
-        height: 100vh;
         position: fixed;
+        height: calc(100vh - 64px);
         background: rgb(0, 0, 0,.3);
     }
+    
+    main > section:nth-child(1) .sidebar {
+        margin: 0 auto;
+        width: calc(100vw - 30vw);
+        border-top: 1px solid var(--color-light);
+    }
 
-    /* -------------- Fim do Sidebar (modal) -------------- */
+    main > section:nth-child(1) .sidebar .menu-item {
+        display: flex;
+        padding: 0 4rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    main > section:nth-child(1) .sidebar .menu-item:hover {
+        background: var(--color-light);
+    }
+
+    /* -------------- Elemento Abbr -------------- */
+
+    main .sidebar .menu-item .abbr-menu-item {
+        box-shadow: none;
+        position: static;
+        border-radius: 6px;
+        display: inline-block;
+    }
+
+    /* -------------- Fim do Elemento Abbr -------------- */
+
+/* -------------- Fim do Sidebar (modal) -------------- */
 
     main section#S2-2-DIV-1 {
         grid-template-rows: calc(100vh - 150px) 50px;
