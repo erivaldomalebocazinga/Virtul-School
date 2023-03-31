@@ -11,7 +11,7 @@
 
     --color-white: hsl(252,30%, var(--white-color-lightness));
     --color-light: hsl(252,30%, var(--light-color-lightness));
-    --color-super-light: #e0e0e0;
+    --color-super-light:hsl(230, 0%, var(--light-color-lightness));
     --color-gray: hsl(var(--color-primary-hue),15%,60%);
 
     --color-primary: hsl(var(--color-primary-hue), 100%, 49%);
@@ -36,12 +36,12 @@
 }
 
 body {
-
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
     color: var(--color-dark);
-    background: rebeccapurple;
 }
-
-/* ======= GERAL STYLE ======== */
 
 ::-webkit-scrollbar {
     width: 3px;
@@ -51,289 +51,111 @@ body {
     background: var(--color-gray);
 }
 
-.logo img {
-    width: 50px;
-}
-a {
-    color: var(--color-dark);
-}
-.logo {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
 .container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.profile-photo {
-    width: 2.7rem;
-    overflow: hidden;
-    /* aspect-ratio: 1/1; */
-    border-radius: 50%;
-}
-
-img {
-    width: 100%;
-    display: block;
-}
-
-
-/* =========  NAV TOP  ========== */
-nav {
-    width: 100%;
-    height: 64px;
-    background: var(--color-white);
-}
-
-nav .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.left {
+    height: 100%;
+    flex-basis: 25%;
+    background-color: var(--color-white);
+    border-right: 1px solid #ddd;
+}
+
+.left header {
+    height: 50px;
+    display: flex;
+    overflow: hidden;
     align-items: center;
+    padding: var(--btn-padding);
+    background: var(--color-light);
     justify-content: space-between;
 }
 
-nav .container .create {
-    display: flex;
-    align-items: center;
-}
-
-nav .container .create i {
-    cursor: pointer;
-    font-size: 1.5rem;
-    display: none;
-}
-
-
-nav .container h2 img {
-    width: 4rem;
-}
-/* ================================== MAIN ==================================== */
-main {
-    display: grid;
-    height: calc(100vh - 64px);
-    grid-template-columns: 70px calc(100vw - 70px);
-}
-
-/* ===============  SIDEBAR LATERAL ================= */
-
-
-main > section:nth-child(1).open  {
-    display: block;
-}
-
-main > section:nth-child(1).close  {
-    display: none;
-}
-
-main > section:nth-child(1) .sidebar {
-    height: calc(100vh - 64px);
-    background: var(--color-white);
-    border-right: 1px solid var(--color-light);
-
-}
-
-main .sidebar .menu-item {
-    width: 100%;
-    height: 4rem;
-    display: flex;
-    cursor: pointer;
-    position: relative;
-    align-items: center;
-    margin-bottom: .5rem;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 300ms ease;
-
-}
-
-/* -------------- Elemento Abbr -------------- */
-
-main .sidebar .menu-item .abbr-menu-item {
-    /* Cria o elemento de abbr na telar */
-    top: 15px;
-    left: 80px;
-    display: none;
-    position: absolute;
-    border-radius: 6px;
-    background: var(--color-super-light);
-    box-shadow: 0 0 .2em 0 rgb(0, 0, 0,.3);
-}
-
-main .sidebar .menu-item:hover .abbr-menu-item {
-    display: block;
-    /* Faz aparecer o elemento de abbr na tela após o hover */
-}
-
-main .sidebar .menu-item .abbr-menu-item div {
-    padding: .5rem;
-    position: relative
-}
-
-/* -------------- Fim do Elemento Abbr -------------- */
-
-main .sidebar .menu-item i .notification-count {
-    top: 5px;
-    right: 10px;
-    width: 17px;
-    height: 17px;
-    display: flex;
-    color: white;
-    font-size: .5rem;
-    border-radius: 50%;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-danger)
-}
-
-main .sidebar .menu-item i {
+.photo-profile {
     width: 40px;
     height: 40px;
-    font-size: 1.2rem;
-    line-height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    transition: all 700ms;
-    color: var(--color-gray);
-    background: var(--color-super-light);
-}
-
-main .sidebar a:hover i,
-main .sidebar a.active i {
-    border-radius: 10px;
-    color: var(--color-white);
-    background: var(--color-primary);
-}
-
-main .sidebar a.menu-item::before {
-    content: '';
-    left: -5px;
-    height: 0%;
-    width: 0px;
-    position: absolute;
-    transition: all 400ms;
-    border-radius: 0px 6px 6px 0px;
-    background: var(--color-primary);
-}
-
-main .sidebar a.menu-item:hover::before {
-    height: 50%;
-    width: 10px;
-}
-
-main .sidebar a.menu-item.active::before {
-    height: 70%;
-    width: 10px;
-}
-
-/* ------------ NOTIFICATION POPUP ------------------- */
-main .sidebar .menu-item .notifications-popup {
-    top: 0;
-    z-index: 8;
-    left: 120%;
-    width: 30rem;
-    min-height: -moz-fit-content;
-    min-height: fit-content;
-    position: absolute;
-    padding: var(--card-padding);
-    background: var(--color-white);
-    border-radius: var(--card-border-radius);
-    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-
-    display: none;/* Aparee e desaparece com JS */
-}
-
-main .sidebar .menu-item .notifications-popup::before {
-    content: "";
-    left: -.6rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    position: absolute;
-    transform: rotate(45deg);
-    background: var(--color-white);
-}
-
-main .sidebar .menu-item .notifications-popup > div {
-    display: flex;
-    gap: .1rem;
-    overflow-y: scroll;
-    flex-direction: column;
-    height: calc(calc(44px + 1rem)* 6);
-}
-
-main .sidebar .menu-item .notifications-popup > div > div {
-    gap: 1rem;
-    display: flex;
-    align-items: start;
-    padding: .5rem 0rem .5rem 0;
-}
-
-main .sidebar .menu-item .notifications-popup > div > div:hover {
-    background: var(--color-light);
-}
-
-main .sidebar .menu-item .notifications-popup > div > div p {
-    width: 350px;
+    cursor: pointer;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; 
+    border-radius: 50%;
 }
 
-.left .notifications-popup small {
-    display: block;
+.photo-profile img {
+    width: 100%;
+    line-height: 40px;
+    vertical-align: 40px;
 }
 
-/* ================================  CHAT MESSAGES =========================== */
-main > section#Sel-chat {
-    display: grid;
-    grid-template-columns: 22vw 72.3vw;
-}
-
-/* ---------------  chat  ----------------- */
-main > section#Sel-chat > section {
-    height: 603px;
-    background: var(--color-white);
-}
-
-section#Sel-chat > section .top-select-chat {
-    padding: var(--card-padding);
-    border-bottom: 1px solid var(--color-light);
-}
-
-/* ----------- Cabeçalho --------- */
-section#Sel-chat > section .top-select-chat div:nth-child(1) {
+.left header div:nth-child(2) {
+    gap: .4rem;
+    height: 100%;
     display: flex;
-    padding: 0 0 1rem 0;
     align-items: center;
     justify-content: space-between;
 }
 
-.search-bar {
+.left header div:nth-child(2) .icon-svg {
+    width: 35px;
+    height: 35px;
     display: flex;
-    background: var(--color-light);
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.left header div:nth-child(2) .icon-svg.active {
+    background: rgba(204, 204, 204, 0.3);
+}
+
+/* search */
+.search-container {
+    gap: .7rem;
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+    background: var(--color-white);
+    justify-content: space-between;
+}
+
+.search-container > div:nth-child(1) {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: .5rem;
     padding: var(--search-padding);
-    border-radius: var(--border-radius);
+    background: var(--color-light);
 }
 
-.search-bar input[type="search"] {
-    width: 30vw;
-    margin-left: 1rem;
-    font-size: 0.9rem;
+.search-container > div:nth-child(1) i {
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.search-container > div:nth-child(1) input {
+    border: none;
     background: transparent;
-    color: var(--color-dark);
 }
 
-.search-bar input[type="search"]::placeholder {
+.search-container .icon-svg {
+    cursor: pointer;
+}
+
+.search-container > div:nth-child(1) input::placeholder {
     color: var(--color-gray);
 }
+
 
 /* ----------- conversas --------- */
 .cont-conversas {
-    height: 81%;
+    height: 570px;
     overflow-y: scroll;
 }
 
@@ -383,105 +205,364 @@ section#Sel-chat > section .top-select-chat div:nth-child(1) {
 }
 
 
-
-/* =======================  viewport-chats ======================== */
-
-main section#viewport-chats {
-    display: grid;
-    grid-template-rows: calc(100vh - 114px) 50px;
+/* ========================= RIGHT ======================== */
+.right {
+    height: 100%;
+    flex-basis: 75%;
+    background-color: #ccc;
 }
 
-main section#viewport-chats div:nth-child(1) {
-    background: rgb(89, 84, 97);
+.right i {
+    cursor: pointer;
 }
 
-main section#viewport-chats div:nth-child(2) {
+.right header .icon-svg {
+    cursor: pointer;
+}
+
+.right header {
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: var(--btn-padding);
+    background: var(--color-light);
+    justify-content: space-between;
+}
+
+.right header div:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ========================  Main========================= */
+.right main {
+    height: calc(100vh - 100px);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)),
+        url(../image/walll.png
+        );
+    background-position: center center;
+}
+
+
+.right main .main-container {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    overflow-y: scroll;
+}
+
+.right main .main-container > div p {
+    display: flex;
+    padding: .7rem;
+    margin: .5rem 0;
+    overflow: hidden;
+    gap: .5rem;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: min-content;
+    max-width: 50vw;
+    border-radius: var(--border-radius);
+}
+
+.right main .main-container > div.visite p {
     background: var(--color-white);
-} 
+}
+
+.right main .main-container > div.your {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.right main .main-container > div.your p {
+    background: var(--color-gray);
+}
+
+.right main .main-container img,
+.right main .main-container video {
+    width: 45vw;
+    border-radius: 
+        var(--card-border-radius) 
+        var(--card-border-radius) 0 0;
+}
+
+/* =================  FOOTER ================ */
+.right footer {
+    position: relative;
+}
+
+/* -------------------  EMOJI --------------------- */
+.right footer > div.modal-emoji {
+    left: 50px;
+    bottom: 60px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+.right footer div.modal-emoji div.emoji-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+div.modal-emoji div.emoji-container div:nth-child(1) {
+    gap: .2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-light);
+}
+
+div.emoji-container div:nth-child(1) i {
+    height: 100%;
+    line-height: 2.2rem;
+    text-align: center;
+    position: relative;
+    width: calc(100% /8);
+}
+
+div.emoji-container div:nth-child(1) i::after {
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: none;
+    height: .25rem;
+    position: absolute;
+    background: var(--color-black);
+}
+
+div.emoji-container div:nth-child(1) i.active {
+    background: rgba(204, 204, 204, 0.3);
+}
+
+div.emoji-container div:nth-child(1) i.active::after {
+    display: block;
+}
+/* ------------------- END EMOJI --------------------- */
+
+.right footer div:nth-child(2) {
+    width: 100%;
+    height: 50px;
+    background: var(--color-white);
+}
+
+.right footer div form {
+    gap: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: var(--btn-padding);
+    justify-content: space-between;
+}
+
+.right footer div form input[type="file"] {
+    display: none;
+}
+
+.right footer div form input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    color: var(--color-dark);
+    background: var(--color-light);
+}
+
+.right footer div form input[type="submit"] {
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;    
+    padding: var(--btn-padding);
+    background: var(--color-black);
+}
 
 
-/*===============================
-MEDAIA QUERIS FOR SMALL LAPTOS AND BIG TABLETS
-============================
-*/
-@media screen and (max-width: 1200px) {
-    main > section#Sel-chat {
-        display: grid;
-        grid-template-columns: 100%;
+/* ============================  SIDEBAR  ========================== */
+
+.sidebar {
+    z-index: 100;
+    width: 100%;
+    display: none;
+    position: absolute;
+    padding-top: .3rem;
+    background: var(--color-white);
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.sidebar a {
+    gap: 1rem;
+    display: flex;
+    height: 2.5rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.sidebar a:hover {
+    background: var(--color-light);
+}
+
+/* ========================================= THEME CUSTUMIZATION ==================================================  */
+.customize-theme {
+    top: 0; 
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    position: fixed;
+    font-size: .9rem;
+    text-align: center;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none; /*aprece e desapace com JS */
+}
+
+.customize-theme h3 {
+    margin-bottom: .5rem;
+}
+
+.customize-theme .card {
+    width: 50%;
+    padding: 3rem;
+    background: var(--color-white);
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3);
+    border-radius: var(--card-border-radius);
+}
+
+/* ---------- PRIMARY COLORS ---------- */
+.customize-theme .color {
+    margin-top: 2rem;
+}
+
+.customize-theme p.text-theme {
+    color: var(--color-gray);
+}
+
+.customize-theme .choose-color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-color span {
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.customize-theme .choose-color span:nth-child(1){
+    background: hsl(46, 100%, 49%);
+}
+
+.customize-theme .choose-color span:nth-child(2){
+    background: hsl(223, 100%, 49%);
+}
+
+.customize-theme .choose-color span:nth-child(3){
+    background: hsl(352, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(4){
+    background: hsl(145, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(5){
+    background: hsl(202, 75%, 60%);
+}
+
+.customize-theme .choose-color span.active {
+    border: 5px solid white;
+}
+
+
+/* ---------- BACKGROUND ---------- */
+.customize-theme .background {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.customize-theme .background h4 {
+    margin-bottom: 1rem;
+}
+
+.customize-theme .choose-bg {
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customize-theme .choose-bg > div {
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+    border-radius: .4rem;
+    justify-content: center;
+    padding: var(--card-padding);
+
+}
+
+.customize-theme .choose-bg > div.active {
+    border: 3px solid var(--color-gray);
+}
+
+.customize-theme .choose-bg .bg-1{
+    color: black;
+    background: white;
+}
+
+.customize-theme .choose-bg .bg-2{
+    color: white;
+    background: hsl(252,30%,17%);
+}
+
+.customize-theme .choose-bg .bg-3{
+    color: white;
+    background: hsl(252, 30%, 10%);
+}
+
+@media (max-width: 1120px) {
+    .container {
+        flex-direction: column;
     }
+}
 
-    main > section#Sel-chat section:nth-child(1) {
+@media (max-width: 767px) {
+    .left{
         display: none;
     }
+    .right {
+        flex-basis: 100%;
+    }
 }
-
-
 /*===============================
 MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
 ============================
 */
 @media screen and (max-width: 992px) {
-    main {
-        height: calc(100vh - 50px);
-        display: grid;
-        grid-template-columns: 100vw;
-    }
-
-    nav .container .create .profile-photo {
-        display: none;
-    }
-
-    nav .container .create i {
-        display: block;
-    }
-    
-    nav .container .create i.fa-xmark {
-        font-size: 2rem;
-    }
-
-    /* --------------  Sidebar (modal) -------------- */
-    main > section:nth-child(1)/* classe: container-sidebar */ {
-        top: 64px;
-        left: 0;
-        z-index: 9;
-        width: 100vw;
-        position: fixed;
-        height: calc(100vh - 64px);
-        background: rgb(0, 0, 0,.3);
-    }
-    
-    main > section:nth-child(1) .sidebar {
-        margin: 0 auto;
-        width: calc(100vw - 30vw);
-        border-top: 1px solid var(--color-light);
-    }
-
-    main > section:nth-child(1) .sidebar .menu-item {
-        display: flex;
-        padding: 0 4rem;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    main > section:nth-child(1) .sidebar .menu-item:hover {
-        background: var(--color-light);
-    }
-
-    /* -------------- Elemento Abbr -------------- */
-
-    main .sidebar .menu-item .abbr-menu-item {
-        box-shadow: none;
-        position: static;
-        border-radius: 6px;
-        display: inline-block;
-    }
-
-    /* -------------- Fim do Elemento Abbr -------------- */
-
-/* -------------- Fim do Sidebar (modal) -------------- */
-
-    main section#S2-2-DIV-1 {
-        grid-template-rows: calc(100vh - 150px) 50px;
+    .customize-theme .card {
+        width: 95vw;
     }
 }
+

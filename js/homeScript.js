@@ -40,6 +40,17 @@ menuItems.forEach(item => {
             document.querySelector('#notifications .notification-count').style.display = 'none'; //irá remover o contador de notificações
         }
     })
+
+    item.addEventListener('toutch', ()=> {
+        changeActiveItem() //chamada da função que irá remover a class 'active' da sidebar  
+        item.classList.add('active')
+        if(item.id != 'notifications') {
+            document.querySelector('.notifications-popup').style.display = 'none';
+        } else{
+            document.querySelector('.notifications-popup').style.display = 'block';
+            document.querySelector('#notifications .notification-count').style.display = 'none'; //irá remover o contador de notificações
+        }
+    })
 })
 
 /* ==================== messeges code ======================== */
@@ -87,53 +98,6 @@ const closeThemeModal = (e)=> {
 themeModal.addEventListener('click', closeThemeModal)
 
 theme.addEventListener('click', openThemeModal)
-
-
-/* --------- Fonts ----------------- */
-
-//Remove a class 'active', se o span não for selecionado
-const removeSizeSelector = ()=> {
-    fontSize.forEach(size => {
-        size.classList.remove('active')
-    }) 
-}
-
-fontSize.forEach(size => {
-
-    size.addEventListener('click', ()=> {
-        removeSizeSelector()
-        let fontSize;
-        size.classList.toggle('active')
-
-
-        if(size.classList.contains('font-size-1')){
-            fontSize = '10px'
-            root.style.setProperty('--sticky-top-left','5.4rem')
-            root.style.setProperty('--sticky-top-rigth','5.4rem')
-        } else if(size.classList.contains('font-size-2')){
-            fontSize = '13px'
-            root.style.setProperty('--sticky-top-left','5.4rem')
-            root.style.setProperty('--sticky-top-rigth','-7rem')
-        } else if(size.classList.contains('font-size-3')){
-            fontSize = '16px'
-            root.style.setProperty('--sticky-top-left','-2rem')
-            root.style.setProperty('--sticky-top-rigth','-17rem')
-        } else if(size.classList.contains('font-size-4')){
-            fontSize = '19px'
-            root.style.setProperty('--sticky-top-left','-5rem')
-            root.style.setProperty('--sticky-top-rigth','-25rem')
-        } else if(size.classList.contains('font-size-5')){
-            fontSize = '22px'
-            root.style.setProperty('--sticky-top-left','-12rem')
-            root.style.setProperty('--sticky-top-rigth','-35rem')
-        }
-    
-        //muda de todo o html
-        document.querySelector('html').style.fontSize = fontSize
-    })
-
-})
-
 
 
 //remove a classe 'active'

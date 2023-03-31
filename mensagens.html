@@ -4,183 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensagens</title>
-    <link rel="stylesheet" href="css/mensagens.css">
-    <link rel="stylesheet" href="css/globalStyle.css">
+    <title>Mensages</title>
+    <link rel="stylesheet" href="css/mensagens.css" media="screen">
+    <link rel="stylesheet" href="css/globalStyle.css" media="all">
+    <link rel="shortcut icon" href="image/favicon1.ico" type="image/x-icon">
     <link rel="stylesheet" href="image/fontawesome/css/all.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <h2 class="logo">
-                <img src="image/IPDDFSocial.png" alt="">
-                IPDDFSocials
-            </h2>
-            
-            <div class="create">
-                <i class="fa-solid fa-bars"></i>
-                <div class="profile-photo">
-                    <img src="./image/profile-8.jpg" alt="">
+    <div class="container">
+		<div class="left">
+            <header>
+                <div class="photo-profile">
+                    <img src="image/profile-8.jpg" alt="foto de perfil">
                 </div>
-            </div>
-        </div>
-    </nav>
-    <!-- ------------------ MAIN ------------------- -->
-    <main>
-        <section id="container-sidebar">
-            <div class="sidebar">
-                <a href="home.html" class="menu-item active">
-                    <span><i class="fa-solid fa-house"></i></span>
-                    <div class="abbr-menu-item">
-                        <div><span>Ínicio</span></div>
+                <div>
+                    <!-- icon de três pontos -->
+                    <div class="icon-svg active">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="currentColor" d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"></path></svg>
                     </div>
-                </a>
-                <a class="menu-item" id="notifications">
-                    <span>
-                        <i class="fa-regular fa-bell">
-                            <small class="notification-count">9+</small>
-                        </i>
-                    </span>
-                    <div class="abbr-menu-item">
-                        <div><span>Notificações</span></div>
-                    </div>
-                    <!------------------ NOTIFICATIN POPOUP ------------------------>
-                        <div class="notifications-popup">
-                            <div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-2.jpg" alt="#">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Emanuel Kissoca</b> Adicinou uma publicação</p>
-                                        <small class="text-muted">2 dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-3.jpg" alt="#">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Cleópatra Silva</b> Adicinou uma publicação</p>
-                                        <small class="text-muted">1 Horas</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-4.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Joseph Luiz</b> e <b>283 outras pessoas</b> viram esse post</p>
-                                        <small class="text-muted">4 Minutos</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-5.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Boares Gunza</b> e <b>Emenegildo Marques</b> comentou esta publicação </p>
-                                        <small class="text-muted">1 Dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-6.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Dianfuana</b> comentou esta publicação</p>
-                                        <small class="text-muted">2 Dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-7.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Secretária</b> Adicinou uma publicação</p>
-                                        <small class="text-muted">4 Dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-18.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
-                                        <small class="text-muted">5 Dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-19.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
-                                        <small class="text-muted">5 Dias</small>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="profile-photo">
-                                        <img src="image/profile-8.jpg" alt="">
-                                    </div>
-                                    <div class="notification-body">
-                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
-                                        <small class="text-muted">5 Dias</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!------------------ END NOTIFICATIN POPOUP ------------------------>
-                </a>
-                <a class="menu-item" id="messages-notification">
-                    <span>
-                        <i class="fa-regular fa-message">
-                            <small class="notification-count">6</small>
-                        </i>
-                    </span>
-                    <div class="abbr-menu-item">
-                        <div><span>Mensagens</span></div>
-                    </div>
-                </a>
-                <a class="menu-item">
-                    <span>
-                        <i class="fa-regular fa-window-maximize"></i>
-                    </span>
-                    <div class="abbr-menu-item">
-                        <div><span>Vitrine</span></div>
-                    </div>
-                </a>
-                <a class="menu-item" id="theme">
-                    <span>
-                        <i class="fa-solid fa-palette"></i>
-                    </span>
-                    <div class="abbr-menu-item">
-                        <div><span>Theme</span></div>
-                    </div>
-                </a>
-                <a class="menu-item" >
-                    <span>
-                        <i class="fa-solid fa-gear"></i>
-                    </span>
-                    <div class="abbr-menu-item">
-                        <div><span>Definições</span></div>
-                    </div>
-                </a>
-            </div>
-        </section>
-        <section id="Sel-chat">
-            <section>
-                <div class="top-select-chat">
+                </div>
+            </header>
+            <div class="xcontent">
+                <div class="search-container">
                     <div>
-                        <h2>Mensagens</h2>
-                        <i class="fa-regular fa-pen-to-square"></i>
-                    </div>
-                    <div class="search-bar">
-                        <label for="select-chat">
+                        <label for="chatpesquisa">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </label>
-                        <input type="search" id="select-chat" placeholder="Procure pela conversa">
+                        <input type="search" placeholder="Pesquisa por um grupo" name="chatpesquisa" id="chatpesquisa">
                     </div>
+                    <span>
+                        <!-- icon de filtro -->
+                        <div class="icon-svg ">
+                            <svg viewBox="0 0 24 24" height="20" width="20" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="currentColor" d="M10,18.1h4v-2h-4V18.1z M3,6.1v2h18v-2H3z M6,13.1h12v-2H6V13.1z"></path></svg>
+                        </div>
+                    </span>
                 </div>
                 <div class="cont-conversas">
                     <!-- ----------------- 01 ------------------ -->
@@ -300,31 +157,156 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section id="viewport-chats">
+            </div>
+			
+		</div>
+		<div class="right">
+            <header>
                 <div>
-                    S2.2 - DIV-1
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <div class="photo-profile">
+                        <img src="image/profile-8.jpg" alt="foto de perfil do grupo">
+                    </div>
+                    <div>
+                        <h3>TI12C - TLP</h3>
+                        <p id="digiteournot">digitando...</p>
+                    </div>
                 </div>
                 <div>
-                    <form action="#">
+                    <!-- icon de três pontos -->
+                    <div class="icon-svg">
+                        <svg viewBox="0 0 24 24" height="24" width="24" preserveAspectRatio="xMidYMid meet" class="" version="1.1" x="0px" y="0px" enable-background="new 0 0 24 24" xml:space="preserve"><path fill="currentColor" d="M12,7c1.104,0,2-0.896,2-2c0-1.105-0.895-2-2-2c-1.104,0-2,0.894-2,2 C10,6.105,10.895,7,12,7z M12,9c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,9.895,13.104,9,12,9z M12,15 c-1.104,0-2,0.894-2,2c0,1.104,0.895,2,2,2c1.104,0,2-0.896,2-2C13.999,15.894,13.104,15,12,15z"></path></svg>
+                    </div>
+                </div>
+            </header>
+            <!-- ------ SIDEBAR ------------- -->
+            <div class="sidebar">
+                <a href="home.html" class="menu-item active">
+                    <span><i class="fa-solid fa-house"></i></span><h3>Ínicio</h3>
+                </a>
+                <a class="menu-item">
+                    <span><i class="fa-regular fa-window-maximize"></i></span><h3>Vitrine</h3>
+                </a>
+                <a class="menu-item" id="theme">
+                    <span><i class="fa-solid fa-palette"></i></span><h3>Theme</h3>
+                </a>
+                <a class="menu-item" >
+                    <span><i class="fa-solid fa-gear"></i></span><h3>Definições</h3>
+                </a>
+            </div>
+            <!-- -------END OF SIDEBAR ------------- -->
+            <!-- ========================================= THEME CUSTUMIZATION ================================================== -->
+            <div class="customize-theme">
+                <div class="card">
+                    <h2>Personalize a sua interface</h2>
+                    <p class="text-theme">Gerncie a cor e o background.</p>
+                    <!-- -------------- PRIMARY COLORS ----------------- -->
+                    <div class="color">
+                        <h3>Color</h3>
+                        <div class="choose-color">
+                            <span class="color-1 active"></span>
+                            <span class="color-2"></span>
+                            <span class="color-3"></span>
+                            <span class="color-4"></span>
+                            <span class="color-5"></span>
+                        </div>
+                    </div>
+
+                    <!-- -------------- BACKGROUND COLORS ----------------- -->
+                    <div class="background">
+                        <h3>Background</h3>
+                        <div class="choose-bg">
+                            <div class="bg-1 active">
+                                <h5 for="bg-1">Light</h5>
+                            </div>
+
+                            <div class="bg-2">
+                                <h5 for="bg-2">Dark</h5>
+                            </div>
+
+                            <div class="bg-3">
+                                <h5 for="bg-3">Black</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<main>
+                <div class="main-container">
+                    <div class="cont-msg visite">
+                        <div>
+                            <p>
+                                <img src="image/feed-3.jpg" alt="#">
+                                Lorem ipsum dolor sit
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cont-msg your">
+                        <div>
+                            <p>
+                                <video controls preload="auto" src="image/video/tela de login - IPDDF.mkv"></video>
+                                Lorem ipsum dolor sit
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam temporibus dignissimos facilis quis quae saepe excepturi modi, eligendi esse, fugit corporis sed, at ad dicta nihil a quod odio? Architecto!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cont-msg visite">
+                        <div>
+                            <p>Lorem ipsum dolor sit</p>
+                        </div>
+                    </div>
+
+                    <div class="cont-msg your">
+                        <div>
+                            <p>Lorem ipsum dolor sit</p>
+                            <p>Ok</p>
+                            <p>Não complica</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <!-- ==============  emoji  ============= -->
+                <div class="modal-emoji">
+                    <div class="emoji-container">
+                        <div>
+                            <i class="fa-menu fa-regular fa-clock active"></i>
+                            <i class="fa-menu fa-solid fa-face-smile"></i>
+                            <i></i>
+                            <i class="fa-menu fa-solid fa-mug-saucer"></i>
+                            <i class="fa-menu fa-regular fa-futbol"></i>
+                            <i class="fa-menu fa-solid fa-car"></i>
+                            <i></i>
+                            <i class="fa-menu fa-regular fa-flag"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============== fim emoji  =============  -->
+
+                <!-- Formulario da barra de envio de mensagens -->
+                <div>
+                    <form action="#" enctype="multipart/form-data">
+                        <!-- Area de envio de ficheiros -->
                         <input type="file"  id="ficheiros" placeholder="#">
                         <label for="ficheiros"><i class="fa-solid fa-file"></i></label>
+                        <!-- Fim Area de envio de ficheiros -->
                         
-                        <i class="fa-solid fa-microphone"></i>
-                        <i class="fa-solid fa-face-smile"></i>
+                        <!-- <i class="fa-solid fa-microphone"></i>-->
 
-                        <input type="text" placeholder="Escreva aqui a sua mensagem">
+                        <i class="fa-solid fa-face-smile" id="face-smile"></i><!-- Icon emoji -->
+                        
+                        <input type="text" id="caixaTexto" placeholder="Escreva aqui a sua mensagem">
                         
                         <input type="submit" id="btnEnviar" value="Enviar">
-                        <label for="btnEnviar">
-                            <i class="fa-brands fa-telegram"></i>
-                        </label>
                     </form>
                 </div>
-            </section>
-        </section>
-        
-    </main>
+            </footer>
+		</div>
+	</div>
 </body>
-    <script defer src="js/mensagesScript.js"></script>
+<script defer src="js/mensagesScript.js"></script>
 </html>
