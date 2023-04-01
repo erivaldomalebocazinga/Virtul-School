@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+:root {
+    /* variaveis de manipulação js */
+    --color-primary-hue: 46; 
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+
+    --color-white: hsl(252,30%, var(--white-color-lightness));
+    --color-light: hsl(252,30%, var(--light-color-lightness));
+    --color-super-light:hsl(230, 0%, var(--light-color-lightness));
+    --color-gray: hsl(var(--color-primary-hue),15%,60%);
+
+    --color-primary: hsl(var(--color-primary-hue), 100%, 49%);
+    --color-secundary: hsl(var(--color-primary-hue),100%,80%);
+
+    --color-success: hsl(120,95%,65%);
+    --color-danger: hsl(0,95%,65%);
+
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+    --color-black: hsl(252,30%,10%);
+
+    /* artributs */
+
+    --border-radius: 1rem;
+    --card-border-radius: 1rem;
+    --btn-padding: 0.6rem 1rem;
+    --search-padding: 0.6rem 1rem;
+    --card-padding: 1rem;
+
+    --sticky-top-left: 5.4rem;    
+    --sticky-top-rigth: -18rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: var(--color-dark);
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: var(--color-gray);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.left {
+    height: 100%;
+    flex-basis: 25%;
+    background-color: var(--color-white);
+    border-right: 1px solid #ddd;
+}
+
+.left header {
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: var(--btn-padding);
+    background: var(--color-light);
+    justify-content: space-between;
+}
+
+.photo-profile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.photo-profile img {
+    width: 100%;
+    line-height: 40px;
+    vertical-align: 40px;
+}
+
+.left header div:nth-child(2) {
+    gap: .4rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left header div:nth-child(2) .icon-svg {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.left header div:nth-child(2) .icon-svg.active {
+    background: rgba(204, 204, 204, 0.3);
+}
+
+/* search */
+.search-container {
+    gap: .7rem;
+    display: flex;
+    padding: .5rem;
+    align-items: center;
+    background: var(--color-white);
+    justify-content: space-between;
+}
+
+.search-container > div:nth-child(1) {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-radius: .5rem;
+    padding: var(--search-padding);
+    background: var(--color-light);
+}
+
+.search-container > div:nth-child(1) i {
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.search-container > div:nth-child(1) input {
+    border: none;
+    background: transparent;
+}
+
+.search-container .icon-svg {
+    cursor: pointer;
+}
+
+.search-container > div:nth-child(1) input::placeholder {
+    color: var(--color-gray);
+}
+
+
+/* ----------- conversas --------- */
+.cont-conversas {
+    height: 570px;
+    overflow-y: scroll;
+}
+
+.cont-conversas .message-grup {
+    gap: .7rem;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    padding: 0 .5rem;
+    position: relative;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+.cont-conversas .message-grup:hover {
+    background: var(--color-light);
+}
+
+.cont-conversas .message-grup .lastMessage{
+    font-size: .8rem;
+    margin-top: .2rem;
+    color: var(--color-gray);
+}
+
+.cont-conversas .message-grup img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cont-conversas .message-grup .count-hours {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+
+.cont-conversas .message-grup .messages-count {
+    width: 15px;
+    height: 15px;
+    right: 7px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    color: var(--color-white);
+    transform: translateY(-20px);
+    background: var(--color-primary);
+}
+
+
+/* ========================= RIGHT ======================== */
+.right {
+    height: 100%;
+    flex-basis: 75%;
+    background-color: #ccc;
+}
+
+.right i {
+    cursor: pointer;
+}
+
+.right header .icon-svg {
+    cursor: pointer;
+}
+
+.right header {
+    height: 50px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: var(--btn-padding);
+    background: var(--color-light);
+    justify-content: space-between;
+}
+
+.right header div:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* ========================  Main========================= */
+.right main {
+    height: calc(100vh - 100px);
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.3), 
+        rgba(0, 0, 0, 0.3)),
+        url(../image/walll.png
+        );
+    background-position: center center;
+}
+
+
+.right main .main-container {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    overflow-y: scroll;
+}
+
+.right main .main-container > div p {
+    display: flex;
+    padding: .7rem;
+    margin: .5rem 0;
+    overflow: hidden;
+    gap: .5rem;
+    flex-direction: column;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: min-content;
+    max-width: 35vw;
+    border-radius: var(--border-radius);
+}
+
+.right main .main-container > div.visite p {
+    background: var(--color-white);
+}
+
+.right main .main-container > div.your {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.right main .main-container > div.your p {
+    background: var(--color-gray);
+}
+
+.right main .main-container img,
+.right main .main-container video {
+    width: 30vw;
+    border-radius: 
+        var(--card-border-radius) 
+        var(--card-border-radius) 0 0;
+}
+
+/* =================  FOOTER ================ */
+.right footer {
+    position: relative;
+}
+
+/* -------------------  EMOJI --------------------- */
+.right footer > div.modal-emoji {
+    left: 50px;
+    bottom: 60px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+
+.right footer div.modal-emoji div.emoji-container {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+}
+
+div.modal-emoji div.emoji-container div:nth-child(1) {
+    gap: .2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-light);
+}
+
+div.emoji-container div:nth-child(1) i {
+    height: 100%;
+    line-height: 2.2rem;
+    text-align: center;
+    position: relative;
+    width: calc(100% /8);
+}
+
+div.emoji-container div:nth-child(1) i::after {
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: none;
+    height: .25rem;
+    position: absolute;
+    background: var(--color-black);
+}
+
+div.emoji-container div:nth-child(1) i.active {
+    background: rgba(204, 204, 204, 0.3);
+}
+
+div.emoji-container div:nth-child(1) i.active::after {
+    display: block;
+}
+/* ------------------- END EMOJI --------------------- */
+
+.right footer div:nth-child(2) {
+    width: 100%;
+    height: 50px;
+    background: var(--color-white);
+}
+
+.right footer div form {
+    gap: 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: var(--btn-padding);
+    justify-content: space-between;
+}
+
+.right footer div form input[type="file"] {
+    display: none;
+}
+
+.right footer div form input[type="text"] {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    color: var(--color-dark);
+    background: var(--color-light);
+}
+
+.right footer div form input[type="submit"] {
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;    
+    padding: var(--btn-padding);
+    background: var(--color-black);
+}
+
+
+/* ============================  SIDEBAR  ========================== */
+
+.sidebar {
+    z-index: 100;
+    width: 100%;
+    display: none;
+    position: absolute;
+    padding-top: .3rem;
+    background: var(--color-white);
+}
+
+.sidebar.active {
+    display: block;
+}
+
+.sidebar a {
+    gap: 1rem;
+    display: flex;
+    height: 2.5rem;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    align-items: center;
+    color: var(--color-dark);
+}
+
+.sidebar a:hover {
+    background: var(--color-light);
+}
+
+/* ========================================= THEME CUSTUMIZATION ==================================================  */
+.customize-theme {
+    top: 0; 
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    position: fixed;
+    font-size: .9rem;
+    text-align: center;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: none; /*aprece e desapace com JS */
+}
+
+.customize-theme h3 {
+    margin-bottom: .5rem;
+}
+
+.customize-theme .card {
+    width: 50%;
+    padding: 3rem;
+    background: var(--color-white);
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.3);
+    border-radius: var(--card-border-radius);
+}
+
+/* ---------- PRIMARY COLORS ---------- */
+.customize-theme .color {
+    margin-top: 2rem;
+}
+
+.customize-theme p.text-theme {
+    color: var(--color-gray);
+}
+
+.customize-theme .choose-color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-color span {
+    width: 2.2rem;
+    height: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.customize-theme .choose-color span:nth-child(1){
+    background: hsl(46, 100%, 49%);
+}
+
+.customize-theme .choose-color span:nth-child(2){
+    background: hsl(223, 100%, 49%);
+}
+
+.customize-theme .choose-color span:nth-child(3){
+    background: hsl(352, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(4){
+    background: hsl(145, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(5){
+    background: hsl(202, 75%, 60%);
+}
+
+.customize-theme .choose-color span.active {
+    border: 5px solid white;
+}
+
+
+/* ---------- BACKGROUND ---------- */
+.customize-theme .background {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.customize-theme .background h4 {
+    margin-bottom: 1rem;
+}
+
+.customize-theme .choose-bg {
+    gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.customize-theme .choose-bg > div {
+    width: 100%;
+    display: flex;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+    border-radius: .4rem;
+    justify-content: center;
+    padding: var(--card-padding);
+
+}
+
+.customize-theme .choose-bg > div.active {
+    border: 3px solid var(--color-gray);
+}
+
+.customize-theme .choose-bg .bg-1{
+    color: black;
+    background: white;
+}
+
+.customize-theme .choose-bg .bg-2{
+    color: white;
+    background: hsl(252,30%,17%);
+}
+
+.customize-theme .choose-bg .bg-3{
+    color: white;
+    background: hsl(252, 30%, 10%);
+}
+
+@media (max-width: 1120px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .left{
+        display: none;
+    }
+    .right {
+        flex-basis: 100%;
+    }
+}
+/*===============================
+MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
+============================
+*/
+@media screen and (max-width: 992px) {
+    .right main .main-container > div p {
+        max-width: 50vw;
+
+    }
+    .right main .main-container img,
+    .right main .main-container video {
+        width: 45vw;
+    }
+    
+    .customize-theme .card {
+        width: 95vw;
+    }
+}
+
