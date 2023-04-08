@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login ou SegIn</title>
+
+    <link rel="stylesheet" href="css/feed.css">
+    <link rel="stylesheet" href="css/GlobalStyle.css">
+    <link rel="stylesheet" href="image/fontawesome/css/all.css">
+</head>
+<body class="dark">
+    <section class="feed-container">
+        <section class="container-sidebar">
+            <div class="logomark">
+                <img src="image/favicon1.ico" alt="Logo IPDDF">
+            </div>
+            <div class="sidebar">
+                <div>
+                    <a href="feed.html" class="sidebar-items active">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="abbrElement">Feed</div>
+                    </a>
+                    <a class="sidebar-items" id="notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <div class="abbrElement">Notificação</div>
+                        <small class="notification-count"></small>
+
+                        <!-- Notifications-popup -->
+                        <div class="notifications-popup">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam reprehenderit, hic commodi et voluptatum nobis eos porro vel, laboriosam fuga molestias sint? Facere voluptatibus inventore incidunt nemo dolorem. Neque, blanditiis.
+                        </div>
+                        <!-- Fim Notifications-popup -->
+                    </a>
+                    <a href="../DDFSocial/mensagens.html" class="sidebar-items">
+                        <i class="fa-regular fa-comments"></i>
+                        <div class="abbrElement">Mensagens</div>
+                    </a>
+                    <a class="sidebar-items">
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <div class="abbrElement">Vitrine</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="body-feed">
+            <header>
+                <div class="search-container">
+                    <form action="#" method="post">
+                        <label for="search-in-feed">
+                            <i class="fa-solid fa-search"></i>
+                        </label>
+                        <input type="search" name="search-in-feed" id="search-in-feed" placeholder="Pesquise no feed">
+                    </form>
+                </div>
+                <div class="pessoal-info">
+                    <div class="create-post">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <!-- ========  Modal(form) do Post  ========= -->
+                    <div class="modal-create-post">
+                        <div>
+                            <div class="profile">
+                                <div class="profile-photo">
+                                    <img src="image/profile-8.jpg" alt="#">
+                                </div>
+                                <div>
+                                    <h3>User Name</h3>
+                                    <small>Cargo</small>
+                                </div>
+                            </div>
+                            <form action="#" method="post">
+                                <textarea name="conteudo-post" id="conteudo-post" placeholder="Em quê estás a pensar?" cols="30" rows="3"></textarea>
+    
+                                <label for="mideaPost">
+                                    <i class="fa-solid fa-photo-film"></i>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Imagens/Vídeos</span>
+                                    <input type="file" name="mideaPost" id="mideaPost" placeholder="#" accept="image/png, image/jpeg, image/jpg, video/MP4, video/MOV, video/WMV, video/AVI">
+                                </label>
+    
+                                <div class="controls-post">
+                                    <input type="submit" value="Enviar">
+                                    <input id="btn-close-post" type="button" value="Cancelar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- ======== Fim Modal(form) do Post  ========= -->
+                    <div class="profile-photo">
+                        <img src="image/profile-8.jpg" alt="">
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="all-feed">
+                    <!-- ------- FEED 01 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-9.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Emanuel Kissoca</h3>
+                                    <small>Prof. SEAC - 15 a Minutos</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-1.jpg" alt="">
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Emanuel Kissoca</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 02 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-19.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Boares Gunza</h3>
+                                    <small>Prof. TREI - a 15 Minutos</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-7.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-11.jpg" alt=""></span>
+                            <span><img src="image/profile-14.jpg" alt=""></span>
+                            <span><img src="image/profile-5.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Boares Gunza</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 03 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Cleópatra Silva</h3>
+                                    <small>Prof. Empreendedorismo - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-6.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Cleópatra Silva</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 04 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-16.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Eunice</h3>
+                                    <small>Prof. Alguma coisa - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-4.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-1.jpg" alt=""></span>
+                            <span><img src="image/profile-13.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Eunice</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 05 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-17.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Dianfuana</h3>
+                                    <small>Bibliotecária - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-1.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Dianfuana</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 06 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-18.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Afonso Luvumbo</h3>
+                                    <small>Secretário Pedagógico - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-3.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Afonso Luvumbo</b> Lorem ipsum dolor sit amet consectet</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 07 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-19.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Nastejo Capitão</h3>
+                                    <small>Prof. <abbr title="Técnicas de Linguagem de Programação">TLP</abbr> - A 24h</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-2.jpg" alt="">
+                        </div>
+
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-8.jpg" alt=""></span>
+                            <span><img src="image/profile-13.jpg" alt=""></span>
+                            <span><img src="image/profile-1.jpg" alt=""></span>
+                            <p><b>Tu</b> e 16 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Nastejo Capitão</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">17 Views</div>
+                    </div>
+                </div>
+                <div class="bar-message">
+                    <div>
+                        <legend>
+                            <h2>Social</h2>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </legend>
+                        <div class="search-messages">
+                            <label for="search-message-chat"><i class="fa-solid fa-search"></i></label>
+                            <input type="search" id="search-message-chat" placeholder="Pesquisa uma conversa">
+                        </div>
+
+                        <div class="on-message">
+                            <legend>
+                                <h2>Mensagens</h2>
+                            </legend>
+                            <main>
+                                <!-- --------- MESSAGE ------ -->
+                                <div class="message"><!-- messege 01 -->
+                                    <div class="profile-photo">
+                                        <img src="image/profile-17.jpg" alt="">
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C PT</h4>
+                                        <p class="text-muted">Grupo, os meu trabalhos</p>
+                                    </div>
+                                </div>
+                                <!-- messenge 02 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-9.jpg" alt="">
+                                        <div class="active"></div>
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C SEAC</h4>
+                                        <p class="text-muted">A prova é já nessa quarta-feira</p>
+                                    </div>
+                                </div>
+                                <!-- messege 03 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-5.jpg" alt="">
+                                        
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C TLP </h4>
+                                        <p class="text-muted">2 novas mensagens</p>
+                                    </div>
+                                </div>
+                                <!-- messenge 04 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-7.jpg" alt="">
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C TREI</h4>
+                                        <p class="text-muted">ok</p>
+                                    </div>
+                                </div>
+                                <!-- messenge 05 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-3.jpg" alt="">
+                                        <div class="active"></div>
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C Matemática</h4>
+                                        <p class="text-muted">Mandem a folha dos exercicios </p>
+                                    </div>
+                                </div>
+                                <!-- messenge 06 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-11.jpg" alt="">
+                                        <div class="active"></div>
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C Física</h4>
+                                        <p class="text-muted">Até amanhã!</p>
+                                    </div>
+                                </div>
+                                <!-- messenge 06 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-11.jpg" alt="">
+                                        <div class="active"></div>
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C Física</h4>
+                                        <p class="text-muted">Até amanhã!</p>
+                                    </div>
+                                </div>
+                                <!-- messenge 06 -->
+                                <div class="message">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-11.jpg" alt="">
+                                        <div class="active"></div>
+                                    </div>
+                                    <div class="message-body">
+                                        <h4>TI12C Física</h4>
+                                        <p class="text-muted">Até amanhã!</p>
+                                    </div>
+                                </div>
+                                <!-- --------- END OF MESSAGE ------ -->
+                        </div>
+                        </main>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </section>
+
+<script src="js/feed.js"></script>
+</body>
+</html>

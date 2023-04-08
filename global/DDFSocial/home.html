@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="pt-ao">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual School</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/globalStyle.css" media="all">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="image/fontawesome/css/all.css">
+
+    <script defer src="js/homeScript.js"></script>
+
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h2 class="logo">
+                <img src="image/IPDDFSocial.png" alt="">
+                IPDDFSocials
+            </h2>
+            <div class="search-bar">
+                <label for="search-header"><i class="fa-solid fa-magnifying-glass"></i></label>
+                <input type="search" id="search-header" placeholder="Pequisar">
+            </div>
+            <div class="create">
+                <div class="profile-photo">
+                    <img src="./image/profile-8.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ------------------ MAIN ------------------- -->
+    <main>
+        <div class="container">
+            <!-- ================ LEFT ================ -->
+            <div class="left">
+                <a class="profile">
+                    <div class="profile-photo">
+                        <img src="image/profile-8.jpg" alt="#">
+                    </div>
+                    <div class="handle">
+                        <h4>ERI VALDO</h4>
+                        <p class="text-muted"><abbr title="Técnico de Informática, 12ª Classe">@Técnico de Informática</abbr></p>
+                    </div>
+                </a>
+                <!-- -------SIDEBAR ------------- -->
+
+                <div class="sidebar">
+                    <a href="home.html" class="menu-item active">
+                        <span><i class="fa-solid fa-house"></i></span><h3>Ínicio</h3>
+                    </a>
+                    <a class="menu-item" id="notifications">
+                        <span><i class="fa-regular fa-bell"><small class="notification-count">9+</small></i></span><h3>Notificações</h3>
+                        <!------------------ NOTIFICATIN POPOUP ------------------------>
+                        <div class="notifications-popup">
+                            <div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-2.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Emanuel Kissoca</b> Adicinou uma publicação
+                                        <small class="text-muted">2 dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-3.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Cleópatra Silva</b> Adicinou uma publicação
+                                        <small class="text-muted">1 Horas</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-4.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Joseph Luiz</b> e <b>283 outras pessoas</b> viram esse post
+                                        <small class="text-muted">4 Minutos</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-5.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Boares Gunza</b> e <b>Emenegildo Marques</b> comentou esta publicação 
+                                        <small class="text-muted">1 Dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-6.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Dianfuana</b> comentou esta publicação
+                                        <small class="text-muted">2 Dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-7.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Secretária</b> Adicinou uma publicação
+                                        <small class="text-muted">4 Dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-18.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Afonso Luvumbo</b> comentou esta publicação
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-19.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Afonso Luvumbo</b> comentou esta publicação
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-8.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <b>Afonso Luvumbo</b> comentou esta publicação
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!------------------ END NOTIFICATIN POPOUP ------------------------>
+                    </a>
+                    <a class="menu-item" id="messages-notification">
+                        <span><i class="fa-regular fa-message"><small class="notification-count">6</small></i></span>
+                        <h3>Mensagens</h3>
+                    </a>
+                    <a class="menu-item">
+                        <span><i class="fa-regular fa-window-maximize"></i></span><h3>Vitrine</h3>
+                    </a>
+                    <a class="menu-item" id="theme">
+                        <span><i class="fa-solid fa-palette"></i></span><h3>Theme</h3>
+                    </a>
+                    <a class="menu-item" >
+                        <span><i class="fa-solid fa-gear"></i></span><h3>Definições</h3>
+                    </a>
+                </div>
+                <!-- -------END OF SIDEBAR ------------- -->
+            </div>
+            <!-- ================ END OF LEFT ================ -->
+
+
+            <!-- ================ MIDDLE ================ -->
+            <div class="middle">
+                <!-- ------- FEEDS -------- -->
+                <div class="feeds">
+                    <!-- ------- FEED 01 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-9.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Emanuel Kissoca</h3>
+                                    <small>Prof. SEAC - 15 a Minutos</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-1.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Emanuel Kissoca</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 02 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-19.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Boares Gunza</h3>
+                                    <small>Prof. TREI - a 15 Minutos</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-7.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-11.jpg" alt=""></span>
+                            <span><img src="image/profile-14.jpg" alt=""></span>
+                            <span><img src="image/profile-5.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Boares Gunza</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 03 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-1.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Cleópatra Silva</h3>
+                                    <small>Prof. Empreendedorismo - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-6.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Cleópatra Silva</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 04 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-16.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Eunice</h3>
+                                    <small>Prof. Alguma coisa - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-4.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-1.jpg" alt=""></span>
+                            <span><img src="image/profile-13.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Eunice</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 05 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-17.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Dianfuana</h3>
+                                    <small>Bibliotecária - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-1.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Dianfuana</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 06 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-18.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Afonso Luvumbo</h3>
+                                    <small>Secretário Pedagógico - Agora</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-3.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-10.jpg" alt=""></span>
+                            <span><img src="image/profile-4.jpg" alt=""></span>
+                            <span><img src="image/profile-15.jpg" alt=""></span>
+                            <p><b>Tu</b> e 226 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Afonso Luvumbo</b> Lorem ipsum dolor sit amet consectet</span></p>
+                        </div>
+                        <div class="comments text-muted">227 Views</div>
+                    </div>
+
+                    <!-- ------- FEED 07 -------- -->
+                    <div class="feed">
+                        <div class="head">
+                            <div class="user">
+                                <div class="profile-photo">
+                                    <img src="image/profile-19.jpg" alt="">
+                                </div>
+                                <div class="info">
+                                    <h3>Nastejo Capitão</h3>
+                                    <small>Prof. <abbr title="Técnicas de Linguagem de Programação">TLP</abbr> - A 24h</small>
+                                </div>
+                            </div>
+                            <span class="edit">
+                                <i class="uil uil-ellipsis-h"></i>
+                            </span>
+                        </div>
+
+                        <div class="photo">
+                            <img src="image/feed-2.jpg" alt="">
+                        </div>
+
+                        <div class="action-buttons">
+                            <div class="interation-buttons">
+                                <span> <i class="uil uil-heart"></i> </span>
+                                <span> <i class="uil uil-comment"></i> </span>
+                                <span> <i class="uil uil-share"></i> </span>
+                            </div>
+                            <div class="bookmark">
+                                <span> <i class="uil uil-bookmark"></i> </span>
+                            </div>
+                        </div>
+
+                        <div class="liked-by">
+                            <span><img src="image/profile-8.jpg" alt=""></span>
+                            <span><img src="image/profile-13.jpg" alt=""></span>
+                            <span><img src="image/profile-1.jpg" alt=""></span>
+                            <p><b>Tu</b> e 16 outras pessoas viram isso!</p>
+                        </div>
+
+                        <div class="caption">
+                            <p><b>Nastejo Capitão</b> Lorem ipsum dolor sit amet consectetur. <span class="harsh-tag">#livestyle</span></p>
+                        </div>
+                        <div class="comments text-muted">17 Views</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- ================ END OF MIDDLE ================ -->
+
+
+            <!-- ========================================= RIGTH ================================================== -->
+            <div class="rigth">
+                <div class="messages">
+                    <div class="heading">
+                        <h2>Mensagens</h2>
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </div>
+                    <!-- --------- SEARCH BAR ------ -->
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="Pesquise alguma meensagem" id="message-search">
+                    </div>
+                    <!-- --------- MESSAGES CATEGORY ------ -->
+                    <div class="category">
+                        <h6 class="active">Geral</h6>
+                        <h6>Dis. Chaves</h6>
+                    </div>
+                    <!-- --------- MESSAGE ------ -->
+                    <div class="message"><!-- messege 01 -->
+                        <div class="profile-photo">
+                            <img src="image/profile-17.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C PT</h5>
+                            <p class="text-muted">Grupo, os meu trabalhos</p>
+                        </div>
+                    </div>
+                    <!-- messenge 02 -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="image/profile-9.jpg" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C SEAC</h5>
+                            <p class="text-muted">A prova é já nessa quarta-feira</p>
+                        </div>
+                    </div>
+                    <!-- messege 03 -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="image/profile-5.jpg" alt="">
+                            
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C TLP </h5>
+                            <p class="text-muted">2 novas mensagens</p>
+                        </div>
+                    </div>
+                    <!-- messenge 04 -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="image/profile-7.jpg" alt="">
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C TREI</h5>
+                            <p class="text-muted">ok</p>
+                        </div>
+                    </div>
+                    <!-- messenge 05 -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="image/profile-3.jpg" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C Matemática</h5>
+                            <p class="text-muted">Mandem a folha dos exercicios </p>
+                        </div>
+                    </div>
+                    <!-- messenge 06 -->
+                    <div class="message">
+                        <div class="profile-photo">
+                            <img src="image/profile-11.jpg" alt="">
+                            <div class="active"></div>
+                        </div>
+                        <div class="message-body">
+                            <h5>TI12C Física</h5>
+                            <p class="text-muted">Até amanhã!</p>
+                        </div>
+                    </div>
+                    <!-- --------- END OF MESSAGE ------ -->
+                </div>
+            </div>
+            <!-- ========================================= END OF RIGTH ================================================== -->
+        </div>
+    </main>
+
+    <!-- ========================================= THEME CUSTUMIZATION ================================================== -->
+    <div class="customize-theme">
+        <div class="card">
+            <h2>Personalize a sua interface</h2>
+            <p class="text-theme">Gerncie a cor e o background.</p>
+            <!-- -------------- PRIMARY COLORS ----------------- -->
+            <div class="color">
+                <h3>Color</h3>
+                <div class="choose-color">
+                    <span class="color-1 active"></span>
+                    <span class="color-2"></span>
+                    <span class="color-3"></span>
+                    <span class="color-4"></span>
+                    <span class="color-5"></span>
+                </div>
+            </div>
+
+            <!-- -------------- BACKGROUND COLORS ----------------- -->
+            <div class="background">
+                <h3>Background</h3>
+                <div class="choose-bg">
+                    <div class="bg-1 active">
+                        <h5 for="bg-1">Light</h5>
+                    </div>
+
+                    <div class="bg-2">
+                        <h5 for="bg-2">Dark</h5>
+                    </div>
+
+                    <div class="bg-3">
+                        <h5 for="bg-3">Black</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
