@@ -13,6 +13,74 @@
     box-sizing: border-box;
 }
 
-body {
+
+body, button,textarea,input {
+    font-weight: 100;
     font-family: 'Ubuntu','Poppins', sans-serif;
+}
+
+/* Pre-Load */
+body .pre-load {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+body .pre-load .content .logo-institut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .pre-load .content .logo-institut img {
+    width: 200px;
+}
+
+body .pre-load .content .load-contain .loadItem {
+    width: 60vw;
+    height: 6px;
+    margin-top: 2rem;
+    margin-bottom: .7rem;
+    background:  #e2e2e2;
+    position: relative;
+}
+
+body .pre-load .content .load-contain .loadItem::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background:  #fac000;
+    animation: preLoad 700ms;
+}
+
+@keyframes preLoad {
+    0% {width: 0;}
+    5% {width: 5%;}
+    10% {width: 10%;}
+    15% {width: 15%;}
+    20% {width: 20%;}
+    25% {width: 25%;}
+    30% {width: 30%;}
+    35% {width: 35%;}
+    40% {width: 40%;}
+    45% {width: 45%;}
+    50% {width: 50%;}
+
+    55% {width: 55%;}
+    60% {width: 60%;}
+    65% {width: 65%;}
+    70% {width: 70%;}
+    75% {width: 75%;}
+    80% {width: 80%;}
+    85% {width: 85%;}
+    90% {width: 90%;}
+    95% {width: 95%;}
+    100% {width: 100%;}
+    
 }

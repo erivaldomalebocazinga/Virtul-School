@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login ou SegIn</title>
+
+    <link rel="stylesheet" href="css/vitrine.css">
+    <link rel="stylesheet" href="css/GlobalStyle.css">
+    <link rel="stylesheet" href="image/fontawesome/css/all.css">
+</head>
+<body class="dark">
+    <section class="feed-container">
+        <section class="container-sidebar">
+            <div class="logomark">
+                <img src="image/favicon1.ico" alt="Logo IPDDF">
+            </div>
+            <div class="sidebar">
+                <div>
+                    <a href="feed.html" class="sidebar-items">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="abbrElement">Feed</div>
+                    </a>
+                    <a class="sidebar-items" id="notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <div class="abbrElement">Notificação</div>
+                        <small class="notification-count"></small>
+
+                        <!-- Notifications-popup -->
+                        <div class="notifications-popup">
+                            <div>
+                                <legend>Notificações</legend>
+                            </div>
+                            <div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-2.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Emanuel Kissoca</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">2 dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-3.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Cleópatra Silva</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">1 Horas</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-4.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Joseph Luiz</b> e <b>283 outras pessoas</b> viram esse post</p>
+                                        <small class="text-muted">4 Minutos</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-5.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Boares Gunza</b> e <b>Emenegildo Marques</b> comentou esta publicação</p> 
+                                        <small class="text-muted">1 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-6.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Dianfuana</b> comentou esta publicação</p>
+                                        <small class="text-muted">2 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-7.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Secretária</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">4 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-18.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-19.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-8.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Notifications-popup -->
+                    </a>
+                    <a href="../DDFSocial/mensagens.html" class="sidebar-items">
+                        <i class="fa-regular fa-comments"></i>
+                        <div class="abbrElement">Mensagens</div>
+                    </a>
+                    <a href="vitrine.html" class="sidebar-items active">
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <div class="abbrElement">Vitrine</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="vitrine">
+            <header>
+                <div class="search-container">
+                    <form action="#" method="post">
+                        <label for="search-in-feed">
+                            <i class="fa-solid fa-search"></i>
+                        </label>
+                        <input type="search" name="search-in-feed" id="search-in-feed" placeholder="Pesquise no feed">
+                    </form>
+                </div>
+                <div class="pessoal-info">
+                    <div class="create-post">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <!-- ========  Modal(form) do Post  ========= -->
+                    <div class="modal-create-post">
+                        <div>
+                            <div class="profile">
+                                <div class="profile-photo">
+                                    <img src="image/profile-8.jpg" alt="#">
+                                </div>
+                                <div>
+                                    <h3>User Name</h3>
+                                    <small>Cargo</small>
+                                </div>
+                            </div>
+                            <form action="#" method="post">
+                                <textarea name="conteudo-post" id="conteudo-post" placeholder="Em quê estás a pensar?" cols="30" rows="3"></textarea>
+    
+                                <label for="mideaPost">
+                                    <i class="fa-solid fa-photo-film"></i>
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Imagens/Vídeos</span>
+                                    <input type="file" name="mideaPost" id="mideaPost" placeholder="#" accept="image/png, image/jpeg, image/jpg, video/MP4, video/MOV, video/WMV, video/AVI">
+                                </label>
+    
+                                <div class="controls-post">
+                                    <input type="submit" value="Postar">
+                                    <input id="btn-close-post" type="button" value="Cancelar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- ======== Fim Modal(form) do Post  ========= -->
+                    <div class="profile-photo">
+                        <img src="image/profile-8.jpg" alt="">
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section>
+                    <header>
+                        <section class="slid-actions">
+                            <article >
+                                <div>
+                                    <div>
+                                        <h1>Actividades</h1>
+                                        <p>Aqui iram aparecer conteudos  sobre <br>o cootidiano do Instituto </p>
+                                    </div>
+                                    <div class="crono-actividade">
+                                        <div>
+                                            <p>01 dia</p>
+                                            <span>01h : 55min : 02s </span>
+                                        </div>
+                                        <button type="button">Lembrete</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <img src="image/logo tesk management.png" alt="">
+                                </div>
+                            </article>
+                        </section>
+                    </header>
+                    <section class="main-actividade">
+                        <legend>Actividades Recentes:</legend>
+                        <div class="slide-activiades-recentes">
+                            <div class="slide-act-rec-item">
+                                <img src="image/feed-1.jpg" alt="">
+
+                                <div class="modal-info-act-recent">
+                                    <p>Actividade 01</p>
+                                </div>
+                            </div>
+                            <div class="slide-act-rec-item">
+                                <img src="image/feed-2.jpg" alt="">
+
+                                <div class="modal-info-act-recent">
+                                    <p>Actividade 02</p>
+                                </div>
+                            </div>
+                            <div class="slide-act-rec-item">
+                                <img src="image/feed-3.jpg" alt="">
+
+                                <div class="modal-info-act-recent">
+                                    <p>Actividade 03</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <div class="qhonrras">
+                        <div class="first-ranking ranking">
+                            <div>
+                                <div>
+                                    <div class="profile-photo">
+                                        <img src="image/profile-8.jpg" alt="#">
+                                    </div>
+                                    <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                </div>
+                            </div>
+                            <h2>Joseph Luiz</h2>
+                            <p>
+                                <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                            </p>
+                        </div>
+                        <div class="secand-third-ranking">
+                           <div>
+                                <div class="ranking secand-ranking">
+                                    <div>
+                                        <div>
+                                            <div class="profile-photo">
+                                                <img src="image/profile-8.jpg" alt="#">
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                        </div>
+                                    </div>
+                                    <h2>Joseph Luiz</h2>
+                                    <p>
+                                        <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                                    </p>
+                                </div>
+                                <div class="ranking third-ranking">
+                                    <div>
+                                        <div>
+                                            <div class="profile-photo">
+                                                <img src="image/profile-8.jpg" alt="#">
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                        </div>
+                                    </div>
+                                    <h2>Joseph Luiz</h2>
+                                    <p>
+                                        <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                                    </p>
+                                </div>
+                           </div>
+                           <div>
+                                <div class="ranking outher-ranking">
+                                    <div>
+                                        <div>
+                                            <div class="profile-photo">
+                                                <img src="image/profile-8.jpg" alt="#">
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                        </div>
+                                    </div>
+                                    <h2>Joseph Luiz</h2>
+                                    <p>
+                                        <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                                    </p>
+                                </div>
+                                <div class="ranking outher-ranking">
+                                    <div>
+                                        <div>
+                                            <div class="profile-photo">
+                                                <img src="image/profile-8.jpg" alt="#">
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                        </div>
+                                    </div>
+                                    <h2>Joseph Luiz</h2>
+                                    <p>
+                                        <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                                    </p>
+                                </div>
+                                <div class="ranking outher-ranking">
+                                    <div>
+                                        <div>
+                                            <div class="profile-photo">
+                                                <img src="image/profile-8.jpg" alt="#">
+                                            </div>
+                                            <i class="fa-solid fa-medal fa-rotate-180"></i>
+                                        </div>
+                                    </div>
+                                    <h2>Joseph Luiz</h2>
+                                    <p>
+                                        <small class="turma">Turma</small> - <small class="mediaFinal">18v</small>
+                                    </p>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </section>
+    </section>
+
+<script defer src="js/feed.js"></script>
+</body>
+</html>
