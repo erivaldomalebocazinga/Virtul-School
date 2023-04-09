@@ -642,6 +642,12 @@ main section div.qhonrras p {
     display: flex;
     margin-top: 1rem;
     align-items: center;
+    justify-content: center;
+}
+
+.main-actividade .slide-activiades-recentes img {
+    height: 100%;
+    width: 100%;
 }
 
 .main-actividade .slide-activiades-recentes .slide-act-rec-item {
@@ -680,3 +686,38 @@ main section div.qhonrras p {
 .slide-act-rec-item:hover .modal-info-act-recent p {
     transform: translateY(0px);
 }
+
+
+
+/*===============================
+MEDAIA QUERIS FOR SMALL LAPTOS AND BIG TABLETS
+============================
+*/
+@media screen and (max-width: 1200px) {
+
+}
+
+/*===============================
+MEDAIA QUERIS FOR SMALL TABLETS AND MOBILE PHONES
+============================
+*/
+@media screen and (max-width: 992px) {
+
+    main header .search-container form {
+        width: 150px;
+
+    }
+
+    main {
+        grid-template-columns: calc(100vw - 70px ) 0;
+    }
+
+    main > section:nth-child(1) {
+        width: 100%;
+    }
+    main section div.qhonrras {
+        display: none;
+    }
+    
+}
+    
