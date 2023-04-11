@@ -1,0 +1,45 @@
+/* Tela maior que 1200px */
+@media screen and (min-width: 1200px) {
+    /* regras CSS aqui */
+  }
+  
+  /* Tela entre 992px e 1199px */
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    /* regras CSS aqui */
+  }
+  
+  /* Tela entre 768px e 991px */
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    /* regras CSS aqui */
+  }
+  
+  /* Tela menor que 768px */
+  @media screen and (max-width: 767px) {
+    /* regras CSS aqui */
+  }
+  
+  /* Tela em modo paisagem */
+  @media screen and (orientation: landscape) {
+    /* regras CSS aqui */
+  }
+  
+  /* Tela em modo retrato */
+  @media screen and (orientation: portrait) {
+    /* regras CSS aqui */
+  }
+  
+  /* Relação de aspecto entre 16:9 e 16:10 */
+  @media screen and (aspect-ratio: 16/9), screen and (aspect-ratio: 16/10) {
+    /* regras CSS aqui */
+  }
+  
+  /* Dispositivo com largura menor ou igual a 640px */
+  @media screen and (max-device-width: 640px) {
+    /* regras CSS aqui */
+  }
+  
+  /* Dispositivo com altura menor ou igual a 480px */
+  @media screen and (max-device-height: 480px) {
+    /* regras CSS aqui */
+  }
+  

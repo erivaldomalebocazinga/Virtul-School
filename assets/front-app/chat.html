@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+
+    <link rel="stylesheet" href="css/GlobalStyle.css"><!-- css global do site -->
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="image/fontawesome/css/all.css"><!-- Importação dos icones -->
+</head>
+<body>
+    <section class="chat-messages">
+        <section class="container-sidebar">
+            <div class="logomark">
+                <img src="image/favicon1.ico" alt="Logo IPDDF">
+            </div>
+            <div class="sidebar">
+                <div>
+                    <a href="feed.html" class="sidebar-items">
+                        <i class="fa-solid fa-house"></i>
+                        <div class="abbrElement">Feed</div>
+                    </a>
+                    <a class="sidebar-items" id="notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <div class="abbrElement">Notificação</div>
+                        <small class="notification-count"></small>
+
+                        <!-- Notifications-popup -->
+                        <div class="notifications-popup">
+                            <div>
+                                <legend>Notificações</legend>
+                            </div>
+                            <div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-2.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Emanuel Kissoca</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">2 dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-3.jpg" alt="#">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Cleópatra Silva</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">1 Horas</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-4.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Joseph Luiz</b> e <b>283 outras pessoas</b> viram esse post</p>
+                                        <small class="text-muted">4 Minutos</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-5.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Boares Gunza</b> e <b>Emenegildo Marques</b> comentou esta publicação</p> 
+                                        <small class="text-muted">1 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-6.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Dianfuana</b> comentou esta publicação</p>
+                                        <small class="text-muted">2 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-7.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Secretária</b> Adicinou uma publicação</p>
+                                        <small class="text-muted">4 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-18.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-19.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                                <div class="notificationItem">
+                                    <div class="profile-photo">
+                                        <img src="image/profile-8.jpg" alt="">
+                                    </div>
+                                    <div class="notification-body">
+                                        <p><b>Afonso Luvumbo</b> comentou esta publicação</p>
+                                        <small class="text-muted">5 Dias</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Fim Notifications-popup -->
+                    </a>
+                    <a href="chat.html" class="sidebar-items active">
+                        <i class="fa-regular fa-comments"></i>
+                        <div class="abbrElement">Mensagens</div>
+                    </a>
+                    <a href="vitrine.html" class="sidebar-items">
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <div class="abbrElement">Vitrine</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="container-chat-messages">
+            <article>
+                <div class="chat">
+                    <div class="chat-head">
+                        <div>
+                            <div class="profile-photo urlProfile">
+                                <img src="image/profile-8.jpg" alt="foto de perfil">
+                            </div>
+                            <h2>Chat</h2>
+                        </div>
+                        <div class="search-messages">
+                            <label for="search-message-chat"><i class="fa-solid fa-search"></i></label>
+                            <input type="search" id="search-message-chat" placeholder="Pesquisa uma mensagem">
+                        </div>
+                    </div>
+                    <div class="chat-main">
+                        <!-- ----------------- 01 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-1.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - SEAC</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 02 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-2.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - TLP</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 03 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-3.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - TREI</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 04 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-4.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - OGI</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 05 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-5.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - EMPREEND</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 06 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-6.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - MATH</h4>
+                                <P class="lastMessage">
+                                    <small>Bom dia estudantes!</small>
+                                </P>
+                                <small class="count-hours">20:10</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 07 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-7.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - ENGLISH</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>1 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">9:02</small>
+                                <small class="messages-count">1</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 08 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-8.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - FÍSICA</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>1 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">01:32</small>
+                                <small class="messages-count">1</small>
+                            </div>
+                        </div>
+                        <!-- ----------------- 09 ------------------ -->
+                        <div class="message-grup">
+                            <div class="profile-photo">
+                                <img src="image/profile-9.jpg" alt="">
+                            </div>
+                            <div>
+                                <h4>TI12C - PT</h4>
+                                <P class="lastMessage">
+                                    <i class="fa-solid fa-file"></i>
+                                    <small>2 Novos ficheiros</small>
+                                </P>
+                                <small class="count-hours">19:12</small>
+                                <small class="messages-count">2</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <section class="notmessage">
+                    <img src="image/GIF/peace.gif" alt="">
+                    <p>Envie e receba mensagens de forma rápida e fácil</p>
+                </section>
+                <div class="mensagens">
+                    <div class="mensagens-head">
+                        <div>
+                            <div class="profile-photo">
+                                <img src="image/profile-9.jpg" alt="foto de perfil do grupo">
+                            </div>
+                            <div>
+                                <h3>TI12C - TLP</h3>
+                                <p id="digiteournot">digitando...</p>
+                            </div>
+                        </div>    
+                        <div class="search-messages">
+                            <input type="search" id="search-conversa-chat" placeholder="Pesquisa uma conversa">
+                            <label for="search-conversa-chat"><i class="fa-solid fa-search"></i></label>
+                        </div>                 
+                    </div>
+                    <div class="mensagens-main">
+                        <div class="box-message-chat-group visite">
+                            <div class="box-message-chat-group-cont">
+                                <div>
+                                    <p>
+                                        <span>
+                                            <img src="image/feed-1.jpg" alt="#">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, dignissimos repellendus quibusdam quidem amet soluta possimus commodi sapiente! Ipsa laboriosam non perspiciatis excepturi suscipit aspernatur unde impedit explicabo iste earum.
+                                        </span>
+                                    </p>
+                                    <p><span>Lorem ipsum</span></p>
+                                </div>
+                                <div class="infor-massage-chat-box">
+                                    <span> 
+                                        <small class="peaple-sand">Nome da pessoa</small> - <small class="date-sand">12:05</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="box-message-chat-group your">
+                            <div class="box-message-chat-group-cont">
+                                <div>
+                                    <p>
+                                        <video controls src="image/video/tela de login - IPDDF.mkv"></video>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    </p>
+                                    <p>Create acount?</p>
+                                    <p>???</p>
+                                </div>
+                                <div class="infor-massage-chat-box">
+                                   <span> 
+                                        <small class="peaple-sand">Nome da pessoa</small> - <small class="date-sand">12:05</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-message-chat-group visite">
+                            <div class="box-message-chat-group-cont">
+                                <div> 
+                                    <p>No</p>
+                                    <p>.</p>
+                                </div>
+                                <div class="infor-massage-chat-box">
+                                    <span> 
+                                        <small class="peaple-sand">Nome da pessoa</small> - <small class="date-sand">12:05</small>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mensagens-footer">
+                        <!-- Formulario da barra de envio de mensagens -->
+                        <form action="#" enctype="multipart/form-data">
+                            <!-- Area de envio de ficheiros -->
+                            <input type="file"  id="ficheiros" placeholder="#">
+                            <label for="ficheiros"><i class="fa-solid fa-file"></i></label>
+                            <!-- Fim Area de envio de ficheiros -->
+                            
+                            <!-- <i class="fa-solid fa-microphone"></i>-->
+
+                            <i class="fa-solid fa-face-smile" id="face-smile"></i><!-- Icon emoji -->
+                            
+                            <input type="text" id="caixaTexto" placeholder="Escreva aqui a sua mensagem">
+                            
+                            <input type="submit" id="btnEnviar" value="Enviar">
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </section>
+    <script defer src="js/GlobalScript.js"></script>
+<script defer src="js/chat.js"></script>
+</body>
+</html>

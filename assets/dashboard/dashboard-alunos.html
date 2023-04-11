@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="../front-app/css/GlobalStyle.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="../front-app/image/fontawesome/css/all.css">
+</head>
+<body>
+    <section class="dashboard">
+        <section class="container-sidebar">
+            <div class="logomark">
+                <img src="../front-app/image/favicon1.ico" alt="Logo IPDDF">
+            </div>
+            <div class="sidebar">
+                <div>
+                    <a class="sidebar-items active">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div class="abbrElement">Alunos</div>
+                    </a>
+                    <a class="sidebar-items">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div class="abbrElement">Professores</div>
+                        
+                    </a>
+                    <a class="sidebar-items ">
+                        <i class="fa-solid fa-square-plus"></i>
+                        <div class="abbrElement">Publicações</div>
+                    </a>
+                    <a class="sidebar-items" id="messages">
+                        <i class="fa-regular fa-comments"></i>
+                        <div class="abbrElement">Mensagens</div>
+                        <small class="notification-count"></small>
+                    </a>
+                    <a class="sidebar-items">
+                        <i class="fa-solid fa-window-maximize"></i>
+                        <div class="abbrElement">Vitrine</div>
+                    </a>
+                </div>
+            </div>
+            <div class="bttn-settings">
+                <a class="sidebar-items">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="abbrElement">Definições</div>
+                </a>
+            </div>
+        </section>
+        <section class="dashboard-container">
+            <header>
+                <div class="Id-area">
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="pessoal-info">
+                    <div class="profile-photo urlProfile">
+                        <img src="../front-app/image/profile-8.jpg" alt="">
+                    </div>
+                    <div class="btn-header">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <div class="list-alunos">
+                    <legend>Filtro da lista</legend>
+                    <div class="filtro-list">
+                        <div class="typefiltro filtro-curso">
+                            <span id="select-filtroCurso" class="select-filtro">
+                                Filtrar por curso
+                                <i class="fa-solid fa-caret-down"></i>
+                            </span>
+                            <!-- Modal filtro por curso -->
+                            <div id="modal-filtro-curso" class="modal-filtro" >
+                                <form action="#" method="post">
+                                    <label for="ensinoGeral" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="ensinoGeral">
+                                        <i class="fa-solid fa-book"></i>
+                                        <span>Ensino Geral</span>
+                                    </label>
+                                    <label for="bioquimica" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="bioquimica">
+                                        <i class="fa-solid fa-dna"></i>
+                                        <span>Bioquímica</span>
+                                    </label>
+                                    <label for="const-civil" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="const-civil">
+                                        <i class="fa-solid fa-compass-drafting"></i>
+                                        <span>Construção Cívil</span>
+                                    </label>
+                                    <label for="TI" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="TI">
+                                        <i class="fa-solid fa-laptop"></i>
+                                        <span>Técnico de Informática</span>
+                                    </label>
+                                    <label for="macMotores" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="macMotores">
+                                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                                        <span>Maquinas e Motores</span>
+                                    </label>
+                                    <label for="electicidade" class="foltro-curso-items">
+                                        <input type="radio" name="filtro-curso" id="electicidade">
+                                        <i class="fa-solid fa-bolt"></i>
+                                        <span>Electricidade</span>
+                                    </label>
+                                </form>
+                            </div>
+                            <!-- Fim Modal filtro por curso -->
+                        </div>
+                        <div class="typefiltro filtro-class">
+                            <span id="select-filtroClasse" class="select-filtro">
+                                Filtrar por classe
+                                <i class="fa-solid fa-caret-down"></i>
+                            </span>
+                            <!-- Modal filtro por classe -->
+                            <div class="modal-filtro" id="modal-filtro-classe">
+                                <div class="ensino-geral">
+                                    <legend>Ensino Geral</legend>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>7ª Classe</p>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>8ª Classe</p>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>9ª Classe</p>
+                                    </span>
+                                </div>
+                                
+                                <div class="curso-tecnico">
+                                    <legend>Cursos Técnicos</legend>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>10ª Classe</p>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>11ª Classe</p>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>13ª Classe</p>
+                                    </span>
+                                    <span>
+                                        <i class="fa-regular fa-circle"></i>
+                                        <p>13ª Classe</p>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- Fim Modal filtro por classe -->
+                        </div>
+                    </div>
+                    
+                    <legend>Lista</legend>
+                </div>
+                <div class="cad-alunos">2</div>
+            </div>
+        </section>
+    </section>
+<script defer src="js/DashboardGlobalScript.js"></script>
+</body>
+</html>

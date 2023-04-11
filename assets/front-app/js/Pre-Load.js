@@ -1,3 +1,4 @@
+"use strict";
 window.addEventListener('load', function() {
     document.querySelector('.pre-load').style.display = 'none'
     this.document.querySelector('title').innerHTML = 'carregando...'

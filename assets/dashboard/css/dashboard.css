@@ -1,0 +1,230 @@
+:root {
+    --cor-principal: #0027d6;
+    --cor-cinza: #969696;
+    --cor-cinzaEscuro: #4b4b4b;
+    --cor-dark: #2c2c2c;
+
+    --color-branco: #ffffff;
+
+    --color-aceite: #51fb51;
+    --color-perigo: #fb5151;
+
+}
+
+body {
+    color: var(--color-branco);
+}
+
+.container-sidebar {
+    grid-template-rows: 70px calc(100vh - 70px -1rem -70px - 1rem);
+}
+
+.container-sidebar div.bttn-settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sidebar div.bttn-settings a {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    color: var(--cor-cinza);
+}
+
+.container-sidebar div.bttn-settings a.sidebar-items small.notification-count {
+    top: 12px;
+    width: 7px;
+    height: 7px;
+    right: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background: var(--color-perigo);
+}
+
+.container-sidebar div.bttn-settings a.sidebar-items.active {
+    background: var(--cor-principal);
+}
+
+.container-sidebar div.bttn-settings a .abbrElement {
+    top: 15px;
+    left: 70px;
+    z-index: 100;
+    display: none;
+    font-size: 12px;
+    padding: .3rem;
+    position: absolute;
+    border-radius: 6px;
+    background: var(--cor-cinzaEscuro);
+}
+
+.container-sidebar div.bttn-settings a:hover .abbrElement {
+    display: flex;
+}
+
+/* ==================  MAIN ================= */
+.dashboard-container div.main {
+    display: grid;
+    padding: .5rem 1rem;
+    grid-template-columns: auto 400px;
+}
+
+.dashboard-container div.main legend {
+    font-size: .98rem;
+    margin-bottom: .5rem;
+    color: var(--cor-cinza);
+}
+
+/* ---------------- Filtro --------------- */ 
+.filtro-list {
+    gap: 1rem;
+    display: flex;
+    /* height: 2.5rem; */
+    align-items: center;
+}
+
+.filtro-list span.select-filtro {
+    gap: .6rem;
+    border: none;
+    display: flex;
+    font-size: 1rem;
+    cursor: pointer;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    color: var(--color-branco);
+    background: var(--cor-cinzaEscuro);
+}
+
+.filtro-list span.select-filtro.active i {
+    transform: rotate(180deg);
+}
+
+.filtro-list .typefiltro {
+    position: relative;
+}
+
+.filtro-list .typefiltro form {
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    border-radius: 16px;
+    background: var(--cor-cinzaEscuro);
+}
+
+.filtro-list .typefiltro form label {
+    width: 200px;
+    cursor: pointer;
+    color: var(--cor-cinza);
+}
+
+.filtro-list .typefiltro form label:hover {
+    color: var(--color-branco);
+}
+
+.filtro-list .typefiltro form label input[type="radio"] {
+    display: none;
+}
+
+.filtro-list .typefiltro form input[type="radio"]:checked ~ i,
+.filtro-list .typefiltro form input[type="radio"]:checked ~ span {
+    color: var(--color-branco);
+}
+
+/* Modal animation */
+.filtro-list .typefiltro .modal-filtro {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    display: none;
+    transition: 700ms;
+}
+
+.filtro-list span.select-filtro.active ~ .modal-filtro {
+    animation: grad 700ms;
+    display: block;
+}
+
+@keyframes grad {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        display: block;
+        transform: translateY(0);
+    }
+}
+
+
+/*
+.filtro-list span {
+    cursor: pointer;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    border-radius: 10px;
+    padding: .6rem 1.2rem;
+    color: var(--cor-cinza);
+    border: 1px solid transparent;
+    border-top: 1px solid #707070;
+    border-left: 1px solid #707070;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.filtro-list span:hover {
+    color: var(--color-branco);
+    border: 1px solid var(--color-branco);
+}
+
+.filtro-list p {
+    width: 5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.filtro-list .sort {
+    
+}
+
+.filtro-list .sort i {
+    cursor: pointer;
+    color: var(--cor-cinza);
+}
+
+.filtro-list .sort i:hover {
+    color: var(--color-branco);
+}
+
+.filtro-list .sort {
+    display: flex;
+    align-items: center;
+}
+
+
+.filtro-list .sort-left {
+    position: absolute;
+    left: 5px;
+}
+
+.filtro-list .sort-right {
+    position: absolute;
+    right: 5px;
+} */
+
+/* ---------------- Fim Slide --------------- */
+
+.dashboard-container div.main .cad-alunos {
+    background: #333;
+}

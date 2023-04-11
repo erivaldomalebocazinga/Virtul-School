@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #0027d6;
+    --cor-cinza: #969696;
+    --cor-cinzaEscuro: #4b4b4b;
+    --cor-dark: #2c2c2c;
+
+    --color-branco: #ffffff;
+
+    --color-aceite: #51fb51;
+    --color-perigo: #fb5151;
+
+}
+
+body {
+    background: var(--cor-dark);
+}
+
+body, button,textarea,input {
+    font-weight: 100;
+    font-family: 'Ubuntu','Poppins', sans-serif;
+}
+
+.profile-photo {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--cor-cinza);
+}
+
+/* ============ Sidebar and Header(secand-section) ===============*/
+
+body > section {
+    display: grid;
+    grid-template-columns: 70px calc(100vw - 70px);
+} 
+
+body > section > section {
+    height: 100vh;
+}
+
+/* ====================== SIDEBAR CONTAINER ================= */
+.container-sidebar {
+    gap: 1rem;
+    display: grid;
+    flex-direction: column;
+    background: var(--cor-dark);
+    border-right: 1px solid var(--cor-cinzaEscuro);
+    grid-template-rows: 70px calc(85vh - 70px - 1rem);
+
+}
+
+/* ----------- LOGO ------------- */
+.container-sidebar div.logomark {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-sidebar div.logomark img {
+    width: 55px;
+}
+
+/* ----------- SIDEBAR ------------- */
+
+.container-sidebar div.sidebar,
+.container-sidebar div.sidebar  > div {
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-sidebar div.sidebar div a {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+    border-radius: 16px;
+    display: inline-block;
+    justify-content: center;
+    display: flex;
+    color: var(--cor-cinza);
+}
+
+.container-sidebar div.sidebar div a.sidebar-items small.notification-count {
+    top: 12px;
+    width: 7px;
+    height: 7px;
+    right: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background: var(--color-perigo);
+}
+
+.container-sidebar div.sidebar div a.sidebar-items.active {
+    background: var(--cor-principal);
+}
+
+.container-sidebar div.sidebar div a.active i {
+    color: var(--color-branco);
+}
+/* =00===============  NOTIFICAÇÕES =================== */
+.sidebar div a.sidebar-items .notifications-popup {
+    top: 0;
+    left: 70px;
+    z-index: 100;
+    padding: .5rem;
+    width: 370px;
+    position: absolute;
+    border-radius: 16px;
+    background: var(--cor-cinzaEscuro);
+
+    display: none;
+}
+
+.sidebar div a.sidebar-items .notifications-popup > div {
+    gap: .5rem;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    height: calc(3rem* 5);
+}
+
+.sidebar div a.sidebar-items .notifications-popup > div:first-child {
+    height: auto;
+}
+
+.sidebar div a.sidebar-items .notifications-popup > div:first-child legend {
+    font-size: 1rem;
+    font-weight: 100;
+    margin: .5rem 0 1rem 0;
+}
+
+.sidebar div a.sidebar-items .notifications-popup > div .profile-photo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.sidebar div a.sidebar-items .notifications-popup > div .notificationItem {
+    gap: 1rem;
+    width: 100%;
+    display: flex;
+    height: 3.5rem;
+    align-items: center;
+}
+
+.notifications-popup > div .notification-body {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.notifications-popup > div .notification-body p {
+    width: 15rem;
+    overflow: hidden;
+    font-size: .9rem;
+    margin-top: .2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.notifications-popup > div .notification-body p b {
+    color: var(--color-branco);
+}
+
+/* =00=============== fim NOTIFICAÇÕES =================== */
+.container-sidebar div.sidebar div a .abbrElement {
+    top: 15px;
+    left: 70px;
+    z-index: 100;
+    display: none;
+    font-size: 12px;
+    padding: .3rem;
+    position: absolute;
+    border-radius: 6px;
+    background: var(--cor-cinzaEscuro);
+}
+
+.container-sidebar div.sidebar div a:hover .abbrElement {
+    display: flex;
+}
+
+/* ====================== fim SIDEBAR CONTAINER ================= */
+
+/* ====================== Header(section 2) ================= */
+body > section > section:nth-child(2) {
+    display: grid;
+    background: var(--cor-dark);
+    grid-template-rows: 70px calc(100vh - 70px);
+}
+
+body > section > section:nth-child(2) > header {
+    display: flex;
+    padding: 0 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body > section > section:nth-child(2) > header .search-container {
+    height: 2.5rem;
+    border-radius: 10px;
+    padding: .5rem .5rem;
+    background: var(--cor-cinzaEscuro);
+}
+
+body > section > section:nth-child(2) > header .search-container i {
+    cursor: text;
+    color: var(--cor-cinza);
+}
+
+body > section > section:nth-child(2) > header .search-container form {
+    gap: .6rem;
+    height: 100%;
+    width: 320px;
+    display: flex;
+    align-items: center;
+}
+
+body > section > section:nth-child(2) > header .search-container form input[type="search"] {
+    width: 100%;
+    border: none;
+    height: 1.5rem;
+    font-size: .95rem;
+    background: transparent;
+    color: var(--color-branco);
+}
+
+body > section > section:nth-child(2) > header .search-container form input[type="search"]::-webkit-input-placeholder {
+    color: var(--cor-cinza);
+}
+
+
+body > section > section:nth-child(2) > header .pessoal-info {
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------------------- CREATE POST -------------------- */
+body > section > section:nth-child(2) > header .pessoal-info .create-post,
+body > section > section:nth-child(2) > header .btn-header {
+    display: flex;
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-cinza);
+    background: var(--cor-cinzaEscuro);
+}
+
+body > section > section:nth-child(2) > header .pessoal-info .create-post:hover::after {
+    position: absolute;
+    content: "Criar Post";
+    top: 45px;
+    width: 4rem;
+    height: 1.3rem;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 1.3rem;
+    background: #4b4b4b;
+
+    z-index: 100;
+}
+
+/* ========  Modal post ========== */
+body > section > section:nth-child(2) > header .modal-create-post {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 10000;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    
+    display: none;
+}
+
+.modal-create-post i.fa-circle-check {
+    transition: 700ms;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div {
+    padding: 1rem;
+    border-radius: 16px;
+    background: var(--cor-cinzaEscuro);
+}
+
+
+body > section > section:nth-child(2) > header .modal-create-post > div .profile {
+    gap: .5rem;
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    color: var(--color-branco);
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--color-branco);
+    justify-content: flex-start;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form textarea {
+    width: 40vw;
+    height: 50vh;
+    padding: .5rem;
+    font-size: 1rem;
+    margin-bottom:1rem;
+    color: var(--color-branco);
+    background: var(--cor-dark);
+    font-family: 'Ubuntu','Poppins', sans-serif;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form label {
+    gap: .5rem;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form label i {
+    font-size: 1.2rem;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form label span {
+    font-size: .9rem;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form label:hover span {
+    text-decoration: underline;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form input[type="file"] {
+    display: none;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div .profile-photo  {
+    border: 1px solid var(--cor-dark);
+}
+
+body > section > section:nth-child(2) > header .modal-create-post > div form .controls-post {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    padding: .3rem;
+    align-items: center;
+    border-radius: 16px;
+    background: /* var(--cor-cinza) */ rgba(201, 201, 201, 0.2);
+    justify-content: space-between;
+}
+
+body > section > section:nth-child(2) > header .modal-create-post .controls-post input {
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--color-branco);
+}
+
+body > section > section:nth-child(2) > header .modal-create-post .controls-post input[type="submit"] {
+    height: 100%;
+    border-radius: 12px;
+    background: var(--cor-principal);
+}
+
+body > section > section:nth-child(2) > header .modal-create-post .controls-post input[type="button"]:hover {
+    text-decoration: underline;
+}
+/* ======== Fim Modal post ========== */
+body > section > section:nth-child(2) > header .pessoal-info .profile-photo img {/* foto de perfil no header */
+    cursor: pointer;
+}
+
+/* ====================== Fim Header(section 2) ================= */
+
+
+
+
+
+
+/* ================================ Pre-Load ===============================*/
+body .pre-load {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+body .pre-load .content .logo-institut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body .pre-load .content .logo-institut img {
+    width: 200px;
+}
+
+body .pre-load .content .load-contain .loadItem {
+    width: 60vw;
+    height: 6px;
+    margin-top: 2rem;
+    margin-bottom: .7rem;
+    background:  #e2e2e2;
+    position: relative;
+}
+
+body .pre-load .content .load-contain .loadItem::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background:  #fac000;
+    animation: preLoad 700ms;
+}
+
+@keyframes preLoad {
+    0% {width: 0;}
+    5% {width: 5%;}
+    10% {width: 10%;}
+    15% {width: 15%;}
+    20% {width: 20%;}
+    25% {width: 25%;}
+    30% {width: 30%;}
+    35% {width: 35%;}
+    40% {width: 40%;}
+    45% {width: 45%;}
+    50% {width: 50%;}
+
+    55% {width: 55%;}
+    60% {width: 60%;}
+    65% {width: 65%;}
+    70% {width: 70%;}
+    75% {width: 75%;}
+    80% {width: 80%;}
+    85% {width: 85%;}
+    90% {width: 90%;}
+    95% {width: 95%;}
+    100% {width: 100%;}
+    
+}

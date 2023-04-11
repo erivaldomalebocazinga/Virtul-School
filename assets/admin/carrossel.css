@@ -65,6 +65,7 @@ body{
   height: 340px;
   object-fit: cover;
   user-select: none;
+  -webkit-user-select: none;
   margin-left: 14px;
   width: calc(100% / 3);
 }
